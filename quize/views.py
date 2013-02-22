@@ -1,19 +1,6 @@
 from django.http import HttpResponse
+from django.shortcuts import render, render_to_response
 
 def main_page(request):
-    return HttpResponse("Hello word")
-
-def first_temp(request):
-	output = '''
-		<html>
-			<head><title>%s</title></head>
-			<body>
-	     		<h1>%s</h1><p>%s<p>
-	  		</body>
-		</html>
-	''' %(
-		'Online test',
-		'Welcome to the Online test first page ',
-		'where you can gudge uyrself .'
-		)
-	return HttpResponse(output)	
+    return render_to_response("quize/main_page.html")
+    
