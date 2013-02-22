@@ -46,11 +46,21 @@
             </ul>
           </div><!--/.nav-collapse -->
           
+          {% if user.is_authenticated %}
           <!-- search form -->
           <form class="navbar-search pull-left">
               <input type="text" class="search-query" placeholder="Search">
           </form>          
+          {% endif %}
           
+          <ul class="nav pull-right">
+            {% if user.is_authenticated %}
+            <li><a href="/logout">Logout</a></li>
+            {% else %}
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            {% endif %}
+          </ul>
           
         </div>
       </div>

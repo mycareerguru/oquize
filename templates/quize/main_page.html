@@ -6,8 +6,10 @@
 track your progress for various exams like CAT, GATE, GMAT, MPSC, UPSC and many
 more</p>
 
+{% if not user.is_authenticated %}
 <p>
 <a href="/register">Join today</a> or <a href="/login">Login</a> to explore more.
 </p>
+{% endif %}
 {% endblock %}
 
