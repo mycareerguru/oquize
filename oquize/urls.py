@@ -4,7 +4,8 @@ from django.conf.urls import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 
-from quize.views import main_page, logout_page, register_page, register_success
+from quize.views import main_page, user_page
+from quize.register import logout_page, register_page, register_success
 
 urlpatterns = patterns('',
     (r'^$', main_page),
@@ -12,6 +13,7 @@ urlpatterns = patterns('',
     (r'^logout/$', logout_page),
     (r'^register/$', register_page),
     (r'^register/success/$', register_success),
+    (r'^user/(\w+)/$', user_page),
     # Examples:
     # url(r'^$', 'oquize.views.home', name='home'),
     # url(r'^oquize/', include('oquize.foo.urls')),
