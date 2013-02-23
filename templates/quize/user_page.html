@@ -1,0 +1,17 @@
+{% extends "quize/base.html" %}
+{% block title %}Main Page{% endblock %}
+{% block head %}List of Questions {% endblock %}
+{% block content %}
+{% for q in questions %}
+    <div class="question">
+        <p>{{ q.text }}</p>
+        <ul>
+        <li>{{ q.opt1 }}</li>
+        <li>{{ q.opt2 }}</li>
+        <li>{{ q.opt3 }}</li>
+        <li>{{ q.opt4 }}</li>
+        </ul>
+    </div>
+{% endfor %}
+{% endblock %}
+
