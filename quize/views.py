@@ -86,3 +86,25 @@ def search_page(request):
         'query' : query
     })
     
+
+def search_page1(request):
+    questions = []
+    showResult = False
+    query = ""
+    qlist = []
+    if 'query' in request.GET:
+        query = request.GET['query']
+        showResult = True;
+        questions = Question.objects.filter(text__icontains=query)[:10]
+        qlist = list(questions)
+        tags = Tag.objects.filter(name__icontains=query)
+        for tag in tags:
+            q = tag.questions.all()[:10]
+            qlist.extend(list(q))
+            
+    return render(request, "quize/questionlist.html", {
+        'questions' : qlist,
+        'showResult' : showResult,
+        'query' : query
+    })
+

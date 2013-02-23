@@ -1,3 +1,4 @@
+{% if questions %}
 {% for q in questions %}
     <div class="question">
         <p>{{ q.text }}</p>
@@ -12,3 +13,7 @@
         </ul>
     </div>
 {% endfor %}
+{% else %}
+<p> No Results found </p>
+{% endif %}
+
