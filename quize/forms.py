@@ -33,11 +33,13 @@ class RegisterForm(forms.Form):
             
 
 class QuestionForm(forms.Form):
-    text = forms.CharField()
+    text = forms.CharField(
+        widget=forms.Textarea()
+    )
     opt1 = forms.CharField()
     opt2 = forms.CharField()
     opt3 = forms.CharField()
     opt4 = forms.CharField()
-    ans = forms.CharField()
+    ans = forms.IntegerField()
     tags = forms.CharField(required=False)
     

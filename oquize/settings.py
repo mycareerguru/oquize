@@ -104,6 +104,9 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+LOGIN_URL = "/login/"
+LOGOUT_URL = "/logout/"
+
 ROOT_URLCONF = 'oquize.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.

@@ -1,6 +1,7 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render, render_to_response
 from django.contrib.auth.views import logout
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from quize.forms import RegisterForm, QuestionForm
 from quize.models import Question, Tag
@@ -8,12 +9,15 @@ from quize.models import Question, Tag
 def main_page(request):
     return render(request, "quize/main_page.html")
 
+@login_required
 def user_page(request, user):
     questions = Question.objects.all()
     return render(request, "quize/user_page.html", {
         'questions' : questions
     })
+
     
+@login_required
 def add_question(request):
     form = QuestionForm()
     
@@ -33,14 +37,30 @@ def add_question(request):
             q.num_correct = 0
             q.num_likes = 0
             q.num_unlikes = 0
+            q.save()
             tags = form.cleaned_data['tags']
             for t in tags.split():
                 tag, dummy = Tag.objects.get_or_create(name=t)
                 q.tag_set.add(tag)
                 
             q.save()
+            return HttpResponseRedirect("/")
             
     return render(request, "quize/add_question.html", {
         'form' : form
     })
+
     
+def tag_page(request):
+    tags = Tag.objects.all()
+    return render(request, "quize/tag.html",{
+    'tags' : tags
+    })
+    
+    
+def tag_display(request , tag):
+    a=Tag.objects.get(name = tag)
+    b=a.questions.all()
+    return render(request,"quize/tag_display.html",{
+    'questions' : b
+    })

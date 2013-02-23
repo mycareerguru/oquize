@@ -2,7 +2,7 @@
 {% block title %}Main Page{% endblock %}
 {% block head %}List of Questions {% endblock %}
 {% block content %}
-{% for q in questions %}
+    {% for q in questions %}
     <div class="question">
         <p>{{ q.text }}</p>
         <ul>
@@ -11,10 +11,9 @@
         <li>{{ q.opt3 }}</li>
         <li>{{ q.opt4 }}</li>
         {% for x in q.tag_set.all %}
-            {{ x.name }}
+          <a href="/tags/{{ x.name }}" > {{x.name}}</a>
         {% endfor %}
         </ul>
     </div>
 {% endfor %}
-{% endblock %}
-
+{%endblock%}
