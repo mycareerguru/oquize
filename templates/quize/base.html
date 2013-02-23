@@ -53,8 +53,8 @@
           
           {% if user.is_authenticated %}
           <!-- search form -->
-          <form class="navbar-search pull-left">
-              <input type="text" class="search-query" placeholder="Search">
+          <form class="navbar-search pull-left" method="get" action="/search">
+              <input type="text" class="search-query" name="query" placeholder="Search">
           </form>          
           {% endif %}
           

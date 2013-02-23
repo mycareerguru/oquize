@@ -1,0 +1,11 @@
+{% extends "quize/base.html" %}
+{% block title %}Registration{% endblock %}
+{% block content %}
+    
+{% if showResult %}
+<h2> search results for {{ query }} </h2>
+{% include "quize/questionlist.html" %}
+{% endif %}
+
+{% endblock %}
+

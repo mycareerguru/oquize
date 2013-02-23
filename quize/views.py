@@ -64,3 +64,25 @@ def tag_display(request , tag):
     return render(request,"quize/tag_display.html",{
     'questions' : b
     })
+    
+def search_page(request):
+    questions = []
+    showResult = False
+    query = ""
+    qlist = []
+    if 'query' in request.GET:
+        query = request.GET['query']
+        showResult = True;
+        questions = Question.objects.filter(text__icontains=query)[:10]
+        qlist = list(questions)
+        tags = Tag.objects.filter(name__icontains=query)
+        for tag in tags:
+            q = tag.questions.all()[:10]
+            qlist.extend(list(q))
+            
+    return render(request, "quize/search.html", {
+        'questions' : qlist,
+        'showResult' : showResult,
+        'query' : query
+    })
+    

@@ -4,7 +4,8 @@ from django.conf.urls import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 
-from quize.views import main_page, user_page, add_question,tag_page , tag_display
+from quize.views import main_page, user_page, add_question, tag_page
+from quize.views import tag_display, search_page
 from quize.register import logout_page, register_page, register_success
 
 urlpatterns = patterns('',
@@ -17,6 +18,7 @@ urlpatterns = patterns('',
     (r'^add/$', add_question),
     (r'^tags/$',tag_page),
     (r'^tags/(\w+)/$',tag_display),
+    (r'^search/$', search_page)
     # Examples:
     # url(r'^$', 'oquize.views.home', name='home'),
     # url(r'^oquize/', include('oquize.foo.urls')),
