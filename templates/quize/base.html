@@ -40,9 +40,14 @@
          
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Welcome {{ user.username }}</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              {% if user.is_authenticated %}
+              <li class="active"><a href="/user/{{ user.username }}">Welcome {{ user.username }}</a></li>
+              <li><a href="/tags">Browse</a></li>
+              <li><a href="/add">Add</a></li>
+              {% else %}
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">Contact</a></li>
+              {% endif %}
             </ul>
           </div><!--/.nav-collapse -->
           
