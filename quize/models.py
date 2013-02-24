@@ -26,5 +26,6 @@ class Answer(models.Model):
     question = models.ForeignKey(Question)
     user = models.ForeignKey(User)
     ans = models.IntegerField()
+    correct = models.BooleanField()
     num_attemps = models.IntegerField()
     
