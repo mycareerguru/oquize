@@ -21,3 +21,10 @@ class Tag(models.Model):
     
     def __unicode__(self):
         return self.name
+        
+class Answer(models.Model):
+    question = models.ForeignKey(Question)
+    user = models.ForeignKey(User)
+    ans = models.IntegerField()
+    num_attemps = models.IntegerField()
+    
