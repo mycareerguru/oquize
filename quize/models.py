@@ -26,6 +26,8 @@ class Answer(models.Model):
     question = models.ForeignKey(Question)
     user = models.ForeignKey(User)
     ans = models.IntegerField()
-    correct = models.BooleanField()
-    num_attemps = models.IntegerField()
+    correct = models.BooleanField(default=False)
+    num_attemps = models.IntegerField(default=0)
     
+    def __unicode__(self):
+        return str(self.question.id) + " " + self.user.username + " " + str(self.ans) + " attemps " + str(self.num_attemps) + " " + str(self.correct)

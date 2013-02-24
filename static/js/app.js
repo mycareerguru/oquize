@@ -14,6 +14,27 @@ $(document).ready(function() {
             e.preventDefault();
         }
     })
-})
+    
+    $(".question button").click(function(e) {
+        console.log(e.target);
+        var f = $(e.target).parent();
+        var question = f.find('input[name=question]').val();
+        var ans = f.find('input[name=ans]:radio:checked').val();
+        var url = "/answer/?question=" + question + "&ans=" + ans;
+        var q = f.parent();
+        q.load(url);
+        q.hide();
+        e.preventDefault();
+    })
 
+});
 
+var click_handler = function(e) {
+    alert("You pressed me")
+    var f = e.target.parent();
+    var question = f.find('input[name=question]').val();
+    var ans = f.find('input[name=ans]:radio:checked').val();
+    url = "/answer/?question=" + question + "?ans=" + ans;
+    f.parent.load(url);
+    e.preventDefault();
+}

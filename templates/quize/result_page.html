@@ -1,0 +1,9 @@
+{% extends "quize/base.html" %}
+{% block title %}Main Page{% endblock %}
+{% block head %}Your Result {% endblock %}
+{% block content %}
+<p>You attempted {{ total_attempts }} questions </p>
+<p>You gave correct answers to {{ total_correct }} question.</p>
+<p>You answered {{ total_wrong}} incorrectly </p>
+{% endblock %}
+

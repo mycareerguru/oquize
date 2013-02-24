@@ -4,7 +4,7 @@ from django.contrib.auth.views import logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from quize.forms import RegisterForm, QuestionForm
-from quize.models import Question, Tag
+from quize.models import Question, Tag, Answer
 
 def main_page(request):
     return render(request, "quize/main_page.html")
@@ -86,3 +86,45 @@ def search_page(request):
         'query' : query
     })
 
+@login_required
+def user_answer(request):
+    if not request.method == "GET":
+        raise Http404
+
+    user_ans = int(request.GET['ans'])
+    user_q = request.GET['question']
+    question = Question.objects.get(id=user_q)
+
+    try:
+        answer = Answer.objects.get(user=request.user, question=question)
+    except:
+        answer = Answer(user=request.user, question=question, ans=user_ans)
+        
+    answer.ans = user_ans
+    answer.correct = (question.ans == user_ans);  
+    answer.num_attemps = answer.num_attemps + 1
+        
+    answer.save()
+    return HttpResponse("Hello")
+    
+@login_required
+def result_page(request):
+    try:
+        answers = Answer.objects.filter(user=request.user)
+    except:
+        return Http404
+    total_correct = 0
+    total_wrong = 0
+    total_attempts = 0
+    for ans in answers:
+        total_attempts = total_attempts + ans.num_attemps
+        if ans.correct:
+            total_correct = total_correct + 1
+        else:
+            total_wrong = total_wrong + 1
+    return render(request, "quize/result_page.html", {
+        'total_attempts' : total_attempts,
+        'total_correct' : total_correct,
+        'total_wrong' : total_wrong,
+    })
+    
