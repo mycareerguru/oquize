@@ -4,7 +4,7 @@ $(document).ready(function() {
         if (e.which == 13) {
             query = $(".search-query").val();
             console.log(query);
-            url = "/search1/?query=" + encodeURIComponent(query);
+            url = "/search/?query=" + encodeURIComponent(query);
             console.log(url);
             $("#container").load(url, function() {
                 $("#container").children().first().before("<h3>Search result for " + $(".search-query").val() + "</h3>")

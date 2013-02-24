@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     (r'^tags/$',tag_page),
     (r'^tags/(\w+)/$',tag_display),
     (r'^search/$', search_page),
-    (r'^search1/$', search_page1)
+    (r'^answer/$', user_answer),
     # Examples:
     # url(r'^$', 'oquize.views.home', name='home'),
     # url(r'^oquize/', include('oquize.foo.urls')),
