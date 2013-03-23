@@ -14,14 +14,10 @@ class Question(models.Model):
     num_correct = models.IntegerField(default=0)
     num_likes = models.IntegerField(default=0)
     num_unlikes = models.IntegerField(default=0)
-       
-class Tag(models.Model):
-    name = models.CharField(max_length=30,unique=True)
-    questions = models.ManyToManyField(Question)
     
     def __unicode__(self):
-        return self.name
-        
+        return self.user.username + self.text + self.date_added.__str__()
+
 class Answer(models.Model):
     question = models.ForeignKey(Question)
     user = models.ForeignKey(User)
@@ -31,3 +27,32 @@ class Answer(models.Model):
     
     def __unicode__(self):
         return str(self.question.id) + " " + self.user.username + " " + str(self.ans) + " attemps " + str(self.num_attemps) + " " + str(self.correct)
+
+class Quize(models.Model):
+    quizeName = models.CharField(max_length=30)
+    totalQuestion = models.IntegerField()
+    timeAllowed = models.IntegerField()
+    date_created = models.DateTimeField()
+    user = models.ForeignKey(User)
+    questions = models.ManyToManyField(Question)
+
+class UserQuize(models.Model):
+    userId = models.ForeignKey(User)
+    quizeId = models.ForeignKey(Quize)
+    start = models.DateTimeField()
+    end = models.DateTimeField()
+    totalAttempted = models.IntegerField()
+    totalCorrect = models.IntegerField()
+
+class QuizeAnswers(models.Model):
+    quize = models.ForeignKey(UserQuize)
+    question = models.ForeignKey(Question)
+    ans = models.IntegerField()
+    correct = models.BooleanField(default=False)
+
+class Tag(models.Model):
+    name = models.CharField(max_length=30,unique=True)
+    questions = models.ManyToManyField(Question)
+    quizes = models.ManyToManyField(Quize)
+    def __unicode__(self):
+        return self.name
