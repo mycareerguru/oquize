@@ -7,7 +7,7 @@ $(document).ready(function() {
             url = "/search/?query=" + encodeURIComponent(query);
             console.log(url);
             $("#container").load(url, function() {
-                $("#container").children().first().before("<h3>Search result for " + $(".search-query").val() + "</h3>")
+                //$("#container").children().first().before("<h3>Search result for " + $(".search-query").val() + "</h3>")
                 console.log("AJAX success");
             });
             console.log("Enter button pressed", "value of search is ", $(".search-query").val());

@@ -42,9 +42,10 @@
             <ul class="nav">
               {% if user.is_authenticated %}
               <li class="active"><a href="/user/{{ user.username }}">Welcome {{ user.username }}</a></li>
-              <li><a href="/tags">Browse</a></li>
-              <li><a href="/add">Add</a></li>
+              <li><a href="/tags">Tags</a></li>
+              <li><a href="/quiz">Quizes</a></li>
               <li><a href="/result">Result</a></li>
+              <li><a href="/add">Add</a></li>
               {% else %}
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">Contact</a></li>
@@ -55,7 +56,7 @@
           {% if user.is_authenticated %}
           <!-- search form -->
           <form class="navbar-search pull-left" method="get" action="/search">
-              <input type="text" class="search-query" name="query" placeholder="Search">
+              <input type="text" class="search-query" name="query" placeholder="Search"><i class="icon-search"></i>
           </form>          
           {% endif %}
           

@@ -4,7 +4,7 @@ from django.contrib.auth.views import logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from quize.forms import RegisterForm, QuestionForm
-from quize.models import Question, Tag, Answer
+from quize.models import Question, Tag, Answer, Quize
 
 def main_page(request):
     return render(request, "quize/main_page.html")
@@ -61,8 +61,10 @@ def tag_page(request):
 def tag_display(request , tag):
     a=Tag.objects.get(name = tag)
     b=a.questions.all()
+    q=a.quizes.all();
     return render(request,"quize/tag_display.html",{
-    'questions' : b
+    'questions' : b,
+    'quizes' : q
     })
     
 def search_page(request):
@@ -70,6 +72,7 @@ def search_page(request):
     showResult = False
     query = ""
     qlist = []
+    quizes = []
     if 'query' in request.GET:
         query = request.GET['query']
         showResult = True;
@@ -80,8 +83,13 @@ def search_page(request):
             q = tag.questions.all()[:10]
             qlist.extend(list(q))
             
-    return render(request, "quize/questionlist.html", {
+        for tag in tags:
+            qz = tag.quizes.all()[:10]
+            quizes.extend(list(qz))
+            
+    return render(request, "quize/searchcombine.html", {
         'questions' : qlist,
+        'quizes' : quizes,
         'showResult' : showResult,
         'query' : query
     })
@@ -128,3 +136,9 @@ def result_page(request):
         'total_wrong' : total_wrong,
     })
     
+@login_required
+def quiz_page(request):
+    quizes = Quize.objects.all()
+    return render(request, "quize/quize_page.html", {
+        'quizes' : quizes
+    })
