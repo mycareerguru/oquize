@@ -1,0 +1,18 @@
+<div>
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active">
+            <a href="#questions" data-toggle="tab">Question</a>
+        </li>
+        <li>
+            <a href="#quizes" data-toggle="tab">Quizes</a>
+        </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+       <div id="questions" class="tab-pane fade active in">
+        {% include "quize/questionlist.html" %}
+       </div>
+       <div id="quizes" class="tab-pane fade">
+        {% include "quize/quizelist.html" %}    
+       </div>
+    </div>
+</div>

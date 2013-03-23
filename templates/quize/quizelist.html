@@ -1,0 +1,10 @@
+{% if quizes %}
+{% for q in quizes %}
+    <div class="quize" id="quizeid_{{ q.id }}">
+        <a>{{ q.quizeName }}</a>
+    </div>
+{% endfor %}
+{% else %}
+<p> No Results found </p>
+{% endif %}
+
