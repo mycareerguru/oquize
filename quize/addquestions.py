@@ -59,6 +59,9 @@ class QuestionSaver():
         quiz.save()
         for q in self.questions:
             quiz.questions.add(q)
+
+        for tag in self.tags:
+            q.tag_set.add(tag)
         quiz.save()
 
 def add(filename, username, tags, minutes):
