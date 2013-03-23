@@ -1,5 +1,5 @@
 from django.contrib import admin
-from quize.models import Question, Quize
+from quize.models import Question, Quize, Tag
 
 class QuestionAdmin(admin.ModelAdmin):
     list_display = ('user', 'text', 'date_added')
@@ -16,3 +16,4 @@ class QuizeAdmin(admin.ModelAdmin):
     filter_horizontal = ('questions',)
 
 admin.site.register(Quize, QuizeAdmin)
+admin.site.register(Tag)
