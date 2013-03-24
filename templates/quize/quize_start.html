@@ -2,12 +2,31 @@
 {% block title %}Main Page{% endblock %}
 {% block content %}
     <div class="quiz-header">
-        <p>Name {{ quize.quizeName }}</p>
-        <p>Total Questions {{ quize.totalQuestion }}</p>
-        <p>Time Allowd {{ quize.timeAllowed }}</p>
-    </div>
+        <div id="countdown"></div>
+        <p>Progress: Total <span id="totalQ">{{ quize.totalQuestion }}</span>
+        Answered <span id="totalA">0</span>
+        </p>
+        <div id="progress" class="progress progress-striped active">
+            <div class="bar" style="width: 0%;"></div>
+        </div>
+    </div><br>
+    <hr>
     <div id={{ uquize.id }} class="quizarea">
         <input type="hidden" id="quizid" value={{ uquize.id }} />
         {% include "quize/questionlist.html" %}
     </div>
 {%endblock%}
+
+{% block scripts %}
+    <script src="/static/js/quize.js"></script>
+    <script src="/static/js/jquery.countdown.js"></script>
+    
+    <link href="/static/css/jquery.countdown.css" rel="stylesheet">
+    <script type="application/x-javascript">
+        $("#countdown").countdown({
+            until: "+{{ quize.timeAllowed }}m",
+            format: "hh:mm:ss"
+        })
+        App.quize = new QuizeState({{ quize.id}}, {{ quize.totalQuestion }});
+    </script>
+{% endblock %}
