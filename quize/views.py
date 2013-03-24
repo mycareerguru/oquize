@@ -4,7 +4,7 @@ from django.contrib.auth.views import logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from quize.forms import RegisterForm, QuestionForm
-from quize.models import Question, Tag, Answer, Quize
+from quize.models import Question, Tag, Answer, Quize, UserQuize, QuizeAnswers
 
 def main_page(request):
     return render(request, "quize/main_page.html")
@@ -64,7 +64,8 @@ def tag_display(request , tag):
     q=a.quizes.all();
     return render(request,"quize/tag_display.html",{
     'questions' : b,
-    'quizes' : q
+    'quizes' : q,
+    'showTags' : False
     })
     
 def search_page(request):

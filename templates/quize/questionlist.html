@@ -9,9 +9,11 @@
         <div class="opt"><input type="radio" name="ans" value="3" />{{ q.opt3 }}</div>
         <div class="opt"><input type="radio" name="ans" value="4" />{{ q.opt4 }}</div>
         <input type="hidden" name="question" value="{{q.id}}" />
+        {% if showTags %}
         {% for x in q.tag_set.all %}
             <a href="/tags/{{ x.name }}" > {{x.name}}</a>
         {% endfor %}
+        {% endif %}
         <button>Sumit</button>
         </form>
     </div>
