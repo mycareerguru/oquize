@@ -1,3 +1,4 @@
+import datetime
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -36,20 +37,27 @@ class Quize(models.Model):
     user = models.ForeignKey(User)
     questions = models.ManyToManyField(Question)
 
+    def __unicode__(self):
+        return self.quizeName
+    
 class UserQuize(models.Model):
-    userId = models.ForeignKey(User)
-    quizeId = models.ForeignKey(Quize)
-    start = models.DateTimeField()
-    end = models.DateTimeField()
-    totalAttempted = models.IntegerField()
-    totalCorrect = models.IntegerField()
+    user = models.ForeignKey(User)
+    quize = models.ForeignKey(Quize)
+    start = models.DateTimeField(auto_now_add=True)
+    end = models.DateTimeField(blank=True, null=True)
+    totalAttempted = models.IntegerField(default=0)
+    totalCorrect = models.IntegerField(default=0)
 
+    def __unicode__(self):
+        return "[" + str(self.id) + " " + self.user.username + " " + self.quize.quizeName + "]"
+    
 class QuizeAnswers(models.Model):
     quize = models.ForeignKey(UserQuize)
     question = models.ForeignKey(Question)
     ans = models.IntegerField()
     correct = models.BooleanField(default=False)
-
+    num_attemps = models.IntegerField(default=0)
+    
 class Tag(models.Model):
     name = models.CharField(max_length=30,unique=True)
     questions = models.ManyToManyField(Question)
