@@ -1,3 +1,15 @@
+var App = {}
+
+function questionSubmitted(question) {
+  console.log("questionSubmmited called entry\n");
+  console.log(App.questionSubmitted);
+  if (typeof(App.questionSubmitted) === "function")
+  {
+    console.log("questionSubmmited called\n");
+    App.questionSubmitted(question);
+  }
+}
+
 $(document).ready(function() {
 
     $(".search-query").keydown(function(e) {
@@ -28,18 +40,10 @@ $(document).ready(function() {
         }
         var url = "/answer/?question=" + question + "&ans=" + ans + "&qid=" + qid;
         var q = f.parent();
-        q.load(url);
+        q.load(url, function() {
+            questionSubmitted(f);
+        });
         q.hide();
         e.preventDefault();
     })
 });
-
-var click_handler = function(e) {
-    alert("You pressed me")
-    var f = e.target.parent();
-    var question = f.find('input[name=question]').val();
-    var ans = f.find('input[name=ans]:radio:checked').val();
-    url = "/answer/?question=" + question + "?ans=" + ans;
-    f.parent.load(url);
-    e.preventDefault();
-}
