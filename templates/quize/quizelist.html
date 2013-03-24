@@ -1,7 +1,7 @@
 {% if quizes %}
 {% for q in quizes %}
     <div class="quize" id="quizeid_{{ q.id }}">
-        <a>{{ q.quizeName }}</a>
+        <a href="/quiz/{{ q.id }}">{{ q.quizeName }}</a>
     </div>
 {% endfor %}
 {% else %}
