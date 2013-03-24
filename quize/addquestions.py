@@ -71,15 +71,15 @@ def add(name, filename, username, tags, minutes):
 
 def test():
     Question.objects.all().delete()
-    add("math1", "/home/sagar/q1.txt", "sagar", "math general_apti",
+    add("math1", "scripts/q1.txt", "sagar", "math general_apti",
         20)
-    add("computerknowledge1", "/home/sagar/computer_knowledge1.txt",
+    add("computerknowledge1", "scripts/computer_knowledge1.txt",
         "sagar",
         "computerknowledge", 20)
-    add("computerknowledge2", "/home/sagar/computer_knowledge2.txt",
+    add("computerknowledge2", "scripts/computer_knowledge2.txt",
         "sagar",
         "computerknowledge", 20)
-    add("numberseries1", "/home/sagar/computer_knowledge2.txt",
+    add("numberseries1", "scripts/computer_knowledge2.txt",
         "sagar",
         "math numberseries", 30)
     
