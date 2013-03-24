@@ -1,0 +1,13 @@
+{% extends "quize/base.html" %}
+{% block title %}Main Page{% endblock %}
+{% block content %}
+    <div class="quiz-header">
+        <p>Name {{ quize.quizeName }}</p>
+        <p>Total Questions {{ quize.totalQuestion }}</p>
+        <p>Time Allowd {{ quize.timeAllowed }}</p>
+    </div>
+    <div id={{ uquize.id }} class="quizarea">
+        <input type="hidden" id="quizid" value={{ uquize.id }} />
+        {% include "quize/questionlist.html" %}
+    </div>
+{%endblock%}

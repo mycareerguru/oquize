@@ -1,0 +1,10 @@
+{% extends "quize/base.html" %}
+{% block title %}Main Page{% endblock %}
+{% block content %}
+    <div class="quiz-header">
+        <p>Name {{ quize.quizeName }}</p>
+        <p>Total Questions {{ quize.totalQuestion }}</p>
+        <p>Time Allowd {{ quize.timeAllowed }}</p>
+    </div>
+    <a class="btn" href="/quiz/{{ quize.id }}/start">Start</a>
+{%endblock%}
