@@ -102,17 +102,30 @@ def user_answer(request):
 
     user_ans = int(request.GET['ans'])
     user_q = request.GET['question']
+    quizeid = request.GET['qid'];
     question = Question.objects.get(id=user_q)
-
-    try:
-        answer = Answer.objects.get(user=request.user, question=question)
-    except:
-        answer = Answer(user=request.user, question=question, ans=user_ans)
-        
+    print "Submitting answer question " + str(user_q) + "quize " + str(quizeid)
+    
+    if int(quizeid) == 0:
+        try:
+            answer = Answer.objects.get(user=request.user, question=question)
+        except:
+            answer = Answer(user=request.user, question=question, ans=user_ans)
+    else:
+            quiz = UserQuize.objects.get(id=quizeid)
+            try:
+                answer = QuizeAnswers.objects.get(
+                    quize=quiz,
+                    question=question,
+                )
+            except:
+                answer = QuizeAnswers(
+                    quize=quiz,
+                    question=question,
+                )
     answer.ans = user_ans
     answer.correct = (question.ans == user_ans);  
-    answer.num_attemps = answer.num_attemps + 1
-        
+    answer.num_attemps = answer.num_attemps + 1    
     answer.save()
     return HttpResponse("Hello")
     
