@@ -9,8 +9,10 @@ from quize.models import Question, Tag, Answer, Quize, UserQuize
 
 def quize_display(request , qid):
     q = Quize.objects.get(id=qid)
+    uqs = UserQuize.objects.filter(quize=q, user=request.user);
     return render(request,"quize/quize_display.html",{
-    'quize' : q
+    'quize' : q,
+    'uqs' : uqs,
     })
 
 def quize_start(request , qid):

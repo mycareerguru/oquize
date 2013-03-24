@@ -7,4 +7,12 @@
         <p>Time Allowd {{ quize.timeAllowed }}</p>
     </div>
     <a class="btn" href="/quiz/{{ quize.id }}/start">Start</a>
+    
+    <div id="history">
+        {% for uq in uqs %}
+            <div class="quizeresult" >
+                {{ uq.id }} {{uq.start }} {{ uq.totalCorrect }}
+            </div>
+        {% endfor %}
+    </div>
 {%endblock%}
