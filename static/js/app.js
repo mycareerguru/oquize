@@ -19,14 +19,19 @@ $(document).ready(function() {
         console.log(e.target);
         var f = $(e.target).parent();
         var question = f.find('input[name=question]').val();
+        var qidelem = $("#quizid")[0];
+        var qid = qidelem ? $(qidelem).val() : 0;
         var ans = f.find('input[name=ans]:radio:checked').val();
-        var url = "/answer/?question=" + question + "&ans=" + ans;
+        if (ans == undefined) {
+            e.preventDefault();
+            return;
+        }
+        var url = "/answer/?question=" + question + "&ans=" + ans + "&qid=" + qid;
         var q = f.parent();
         q.load(url);
         q.hide();
         e.preventDefault();
     })
-
 });
 
 var click_handler = function(e) {
