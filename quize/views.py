@@ -95,6 +95,46 @@ def search_page(request):
         'query' : query
     })
 
+def save_general_ans(request, question, user_ans):
+    try:
+        answer = Answer.objects.get(user=request.user, question=question)
+    except:
+        answer = Answer(user=request.user, question=question, ans=user_ans)
+        
+    answer.ans = user_ans
+    answer.correct = (question.ans == user_ans);  
+    answer.num_attemps = answer.num_attemps + 1    
+    answer.save()
+    
+    
+def save_quize_ans(request, question, user_ans, quizeid):
+    created = False
+    quiz = UserQuize.objects.get(id=quizeid)
+    try:
+        answer = QuizeAnswers.objects.get(
+            quize=quiz,
+            question=question,
+        )
+        created = False;
+    except:
+        answer = QuizeAnswers(
+            quize=quiz,
+            question=question,
+        )
+        created = True;
+    answer.ans = user_ans
+    answer.correct = (question.ans == user_ans);  
+    answer.num_attemps = answer.num_attemps + 1
+    answer.save()
+    
+    if (answer.correct):
+        quiz.totalCorrect = quiz.totalCorrect + 1
+    if created:
+        quiz.totalAttempted = quiz.totalAttempted + 1
+        
+    quiz.save()    
+    
+    
 @login_required
 def user_answer(request):
     if not request.method == "GET":
@@ -107,27 +147,12 @@ def user_answer(request):
     print "Submitting answer question " + str(user_q) + "quize " + str(quizeid)
     
     if int(quizeid) == 0:
-        try:
-            answer = Answer.objects.get(user=request.user, question=question)
-        except:
-            answer = Answer(user=request.user, question=question, ans=user_ans)
+        save_general_ans(request, question, user_ans)
     else:
-            quiz = UserQuize.objects.get(id=quizeid)
-            try:
-                answer = QuizeAnswers.objects.get(
-                    quize=quiz,
-                    question=question,
-                )
-            except:
-                answer = QuizeAnswers(
-                    quize=quiz,
-                    question=question,
-                )
-    answer.ans = user_ans
-    answer.correct = (question.ans == user_ans);  
-    answer.num_attemps = answer.num_attemps + 1    
-    answer.save()
-    return HttpResponse("Hello")
+        save_quize_ans(request, question, user_ans, quizeid)
+        
+    return HttpResponse("Hello")    
+        
     
 @login_required
 def result_page(request):

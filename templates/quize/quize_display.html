@@ -8,20 +8,24 @@
     </div>
     <a class="btn" href="/quiz/{{ quize.id }}/start">Start</a>
     
+    {% if uqs %}
     <div id="history">
         <table boder="1px" style="border-color: red">
                 <tr>
                     <td>Id</td>
                     <td>Date Taken</td>
-                    <td>Total Correct Answers</td>
+                    <td>Attempted</td>
+                    <td>Correct</td>
                 </tr>
         {% for uq in uqs %}
                 <tr>
                     <td>{{ uq.id }}</td>
                     <td>{{ uq.start }}</td>
+                    <td>{{ uq.totalAttempted }}</td>
                     <td>{{ uq.totalCorrect }}</td>
                 </tr>
         {% endfor %}
         </table>
     </div>
+    {% endif %}
 {%endblock%}
