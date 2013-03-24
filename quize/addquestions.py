@@ -61,18 +61,28 @@ class QuestionSaver():
             quiz.questions.add(q)
 
         for tag in self.tags:
-            q.tag_set.add(tag)
+            quiz.tag_set.add(tag)
         quiz.save()
 
-def add(filename, username, tags, minutes):
+def add(name, filename, username, tags, minutes):
     qs = QuestionSaver(username, tags.split())
     qs.readFile(filename)
-    qs.makeQuize(filename, minutes)
+    qs.makeQuize(name, minutes)
 
 def test():
     Question.objects.all().delete()
-    add("/tmp/q1.txt", "sagar", "math general_apti", 20)
-
+    add("math1", "/home/sagar/q1.txt", "sagar", "math general_apti",
+        20)
+    add("computerknowledge1", "/home/sagar/computer_knowledge1.txt",
+        "sagar",
+        "computerknowledge", 20)
+    add("computerknowledge2", "/home/sagar/computer_knowledge2.txt",
+        "sagar",
+        "computerknowledge", 20)
+    add("numberseries1", "/home/sagar/computer_knowledge2.txt",
+        "sagar",
+        "math numberseries", 30)
+    
 def main():
         filename = sys.argv[1]
         username = sys.argv[2]
