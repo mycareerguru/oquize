@@ -9,10 +9,19 @@
     <a class="btn" href="/quiz/{{ quize.id }}/start">Start</a>
     
     <div id="history">
+        <table boder="1px" style="border-color: red">
+                <tr>
+                    <td>Id</td>
+                    <td>Date Taken</td>
+                    <td>Total Correct Answers</td>
+                </tr>
         {% for uq in uqs %}
-            <div class="quizeresult" >
-                {{ uq.id }} {{uq.start }} {{ uq.totalCorrect }}
-            </div>
+                <tr>
+                    <td>{{ uq.id }}</td>
+                    <td>{{ uq.start }}</td>
+                    <td>{{ uq.totalCorrect }}</td>
+                </tr>
         {% endfor %}
+        </table>
     </div>
 {%endblock%}

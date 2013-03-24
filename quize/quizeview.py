@@ -9,7 +9,7 @@ from quize.models import Question, Tag, Answer, Quize, UserQuize
 
 def quize_display(request , qid):
     q = Quize.objects.get(id=qid)
-    uqs = UserQuize.objects.filter(quize=q, user=request.user);
+    uqs = UserQuize.objects.filter(quize=q, user=request.user).order_by("-start")[0:10];
     return render(request,"quize/quize_display.html",{
     'quize' : q,
     'uqs' : uqs,
