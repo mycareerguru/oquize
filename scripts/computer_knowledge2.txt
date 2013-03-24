@@ -1,0 +1,120 @@
+The ability to recover and read deleted or damaged files from a criminals computer is an example of a law enforcement specialty called: 
+simulation
+animation
+robotics
+computer forensics.
+4
+The base of the hexadecimal number system is 
+2
+8
+10
+16
+4
+Computer software includes 
+Packaged programs
+Application programs
+Operating system programs
+All of these
+4
+The Operating System Manages 
+Processes
+Memory
+Disks and I/O devices
+All of the above
+4
+Allocation of a resources in a time dependent manner to several program simultaneously called 
+multi user
+multi tasking
+time sharing
+None of these.
+3
+Data that are accumulated and processed in group called 
+Group processing
+Batch Processing
+Time sharing
+None of these.
+2
+Multiprocessing supports more then one_____ at the same time 
+User
+Process
+Hardware
+None of these.
+2
+Which of the following are true about firewalls? 
+Follows a set of rules
+Can be either a hardware or software device
+Filters network traffic
+All the above
+4
+What are the four things needed to connect to the Internet? 
+Monitor, keyboard, mouse, modem
+Telephone line, PDA, modem and computer
+Telephone line, modem, computer, and an ISP
+Modem, computer, PDA and ISP
+3
+1024 bytes equals: 
+1 KB
+1 MB
+1 GB
+1 TB
+1
+What is e-commerce? 
+Buying and selling computer products
+Buying and selling products and services not found in stores
+Buying and selling international goods
+Buying and selling products and services over the Internet
+4
+The process of transferring files from a computer on the Internet to your computer is called 
+Uploading
+Forwarding
+FTP
+Downloading
+4
+A person who uses his expertise to gain access to other people's computers to get information illegally or to cause damage is a 
+Programmer
+Analyst
+Spammer
+Hacker
+4
+What is the commonly used unit for measuring the sped of data transmission? 
+Mega Hertz
+Characters per second
+Nano seconds
+Bits per second
+4
+'Blue tooth' technology allows 
+Satellite communication
+Wireless communication between equipments
+Signal transmission on mobile phones only
+Landline phone to mobile phone communication
+2
+All of the following statements concerning files are true EXCEPT: 
+A file is a collection of related pieces of information stored together for easy reference.
+Files can be generated from an application.
+Files are stored in RAM.
+Files should be organized in folders.
+3
+All of the following statements concerning windows are true EXCEPT: 
+windows are an example of a command-driven environment.
+windows can be resized and repositioned on the desktop.
+more than one window can be open at a time.
+toolbars and scrollbars are features of windows.
+1
+Verification of a login name and password is known as: 
+configuration
+accessibility
+authentication
+logging in
+3
+____________ is the ability of an operating system to control the activities of multiple programs at the same time. 
+Streamlining
+Multiuser
+Multitasking
+Simulcasting
+3
+The operating system does all of the following EXCEPT: 
+provide a way for the user to interact with the computer.
+manage the central processing unit (CPU).
+manage memory and storage.
+enable users to perform a specific task such as document editing.
+4

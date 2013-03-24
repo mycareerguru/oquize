@@ -1,0 +1,120 @@
+____________ controls the way in which the computer system functions and provides a means by which users can interact with the computer. 
+The operating system
+The motherboard
+The platform
+Application software
+1
+The difference between people with access to computers and the Internet and those without this access is known as the: 
+digital divide.
+Internet divide.
+Web divide.
+cyberway divide.
+1
+Servers are computers that provide resources to other computers connected to a: 
+mainframe
+supercomputer
+network
+client
+3
+Word processing, spreadsheet, and photo-editing are examples of: 
+application software.
+system software.
+operating system software.
+platform software.
+1
+A ____________ is approximately one billion bytes. 
+bit
+kilobyte
+gigabyte
+megabyte
+3
+All of the following are examples of input devices EXCEPT a: 
+scanner
+mouse
+printer
+keyboard
+3
+Computers use the ____________ language to process dat 
+relational
+megabyte
+binary
+processing
+3
+In the binary language each letter of the alphabet, each number and each special character is made up of a unique combination of: 
+eight bytes.
+eight characters.
+eight bits.
+eight kilobytes.
+3
+____________ is data that has been organized or presented in a meaningful way. 
+A process
+Information
+Software
+Storage
+2
+All of the following are examples of real security and privacy risks EXCEPT: 
+Viruses
+Identity theft.
+Hackers
+Spam
+4
+Which of the following is an input device? 
+Mouse
+Keyboard
+Scanner
+All the above
+4
+The set of instructions that tells the computer what to do is 
+Softcopy
+Software
+Hardware
+Hardcopy
+2
+Which of the following stores more data? 
+DVD
+CD ROM
+Floppy Disk
+CD RW
+1
+---- is the heart of the computer and this is where all the computing is done. 
+Keyboard
+Monitor
+Central Processing Unit
+Printer
+3
+One byte is equival to 
+8 bit
+16 bit
+32 bit
+64 bit
+1
+To move forward through the tabs 
+CTRL+TAB
+CTRL+SHIFT+TAB
+SHIFT+TAB
+None of these
+1
+Personal computers can be connected together to form a 
+server
+network
+supercomputer
+enterprise
+2
+Choose the smallest memory size 
+kilobyte
+megabyte
+gigabyte
+terabyte
+1
+The steps and tasks needed to process data, such as responses to questions or clicking an icon, are called: 
+instructions
+operating system
+application software
+system unit
+1
+The operating system is the most common type of ____________ software. 
+system
+communication
+application
+word-processing
+1

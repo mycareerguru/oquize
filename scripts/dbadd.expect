@@ -1,0 +1,14 @@
+#!/usr/bin/expect
+
+set timeout 20
+set host  [lindex $argv 0]
+
+spawn python manage.py shell
+
+expect "]:"
+send "import quize.addquestions\r"
+expect "]:"
+send "quize.addquestions.test()\r"
+expect "]:"
+send "quit\r"
+interact
