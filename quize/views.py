@@ -11,7 +11,10 @@ def main_page(request):
 
 @login_required
 def user_page(request, user):
-    questions = Question.objects.all()
+    questions = (Question.objects.all()).order_by('date_added')[:50]
+
+    #qlist=list(questions)
+    #qlist.reverse()
     return render(request, "quize/user_page.html", {
         'questions' : questions
     })
@@ -181,3 +184,11 @@ def quiz_page(request):
     return render(request, "quize/quize_page.html", {
         'quizes' : quizes
     })
+
+@login_required
+def question_page(request, qid):
+    question = Question.objects.get(id=qid)
+    return render(request, "quize/question_page.html", {
+            'q' : question
+    })
+    
