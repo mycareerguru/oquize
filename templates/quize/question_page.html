@@ -1,0 +1,16 @@
+{% extends "quize/base.html" %}
+{% block title %}Main Page{% endblock %}
+{% block head %}Question Page {% endblock %}
+{% block content %}
+
+<div class="question" id="qid_{{ q.id }}">
+    <p>{{ q.text }}</p>
+    
+    <div class="opt"><input type="radio" name="ans" value="1" />{{ q.opt1 }}</div>
+    <div class="opt"><input type="radio" name="ans" value="2" />{{ q.opt2 }}</div>
+    <div class="opt"><input type="radio" name="ans" value="3" />{{ q.opt3 }}</div>
+    <div class="opt"><input type="radio" name="ans" value="4" />{{ q.opt4 }}</div>
+    <button>Sumit</button>
+</div>
+
+{% endblock %}
