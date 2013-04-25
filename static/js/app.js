@@ -29,7 +29,7 @@ $(document).ready(function() {
     
     $(".question button").click(function(e) {
         console.log(e.target);
-        var f = $(e.target).parent();
+        var f = $(e.target).parent().prev().parent();
         var question = f.find('input[name=question]').val();
         var qidelem = $("#quizid")[0];
         var qid = qidelem ? $(qidelem).val() : 0;
@@ -39,11 +39,19 @@ $(document).ready(function() {
             return;
         }
         var url = "/answer/?question=" + question + "&ans=" + ans + "&qid=" + qid;
-        var q = f.parent();
-        q.load(url, function() {
-            questionSubmitted(f);
-        });
-        q.hide();
+	var q = f;
+	$.ajax({
+	    url: '/answer/',
+	    data: {
+		question: question,
+		ans: ans,
+		qid: qid
+	    },
+	    success: function() {
+		q.hide();
+		questionSubmitted(f);
+	    }
+	})
         e.preventDefault();
     })
 });

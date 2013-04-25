@@ -64,3 +64,11 @@ class Tag(models.Model):
     quizes = models.ManyToManyField(Quize)
     def __unicode__(self):
         return self.name
+
+
+class UserQuestion(models.Model):
+    question = models.ForeignKey(Question)
+    user = models.ForeignKey(User)
+    liked = models.BooleanField(default=False)
+    unliked = models.BooleanField(default=False)
+    answered = models.BooleanField(default=False)

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -x
+cd ../
 rm db.sql
-./sync.expect
-./dbadd.expect
+./scripts/sync.expect
+./scripts/dbadd.expect

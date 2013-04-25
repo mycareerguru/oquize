@@ -13,7 +13,9 @@ def main_page(request):
 def user_page(request, user):
     questions = Question.objects.all()
     return render(request, "quize/user_page.html", {
-        'questions' : questions
+        'questions' : questions,
+        'showTags' : True,
+        'showLikes' : True,
     })
 
     
@@ -65,7 +67,8 @@ def tag_display(request , tag):
     return render(request,"quize/tag_display.html",{
     'questions' : b,
     'quizes' : q,
-    'showTags' : False
+    'showTags' : False,
+    'showLikes' : True,
     })
     
 def search_page(request):
@@ -92,7 +95,8 @@ def search_page(request):
         'questions' : qlist,
         'quizes' : quizes,
         'showResult' : showResult,
-        'query' : query
+        'query' : query,
+        'showLikes' : True,
     })
 
 def save_general_ans(request, question, user_ans):
@@ -177,7 +181,9 @@ def result_page(request):
     
 @login_required
 def quiz_page(request):
+    # TODO limit size of rows and order by data created
+    # quizes = Quize.objects.all().order_by("-date_created")[0:50]
     quizes = Quize.objects.all()
     return render(request, "quize/quize_page.html", {
-        'quizes' : quizes
+        'quizes' : quizes,
     })

@@ -18,7 +18,7 @@ QuizeState.prototype.questionAnswered = function(q) {
     }
     var next = $(".question")[this.answered];
     $(next).show();
-    $("#totalA").html(this.answered);
+    // $("#totalA").html(this.answered);
 }
 
 App.questionSubmitted = function(q) {
