@@ -54,4 +54,67 @@ $(document).ready(function() {
 	})
         e.preventDefault();
     })
+
+   
+    $(".question i").click(function(e) {
+	console.log(e.target);
+	var type = $(e.target).attr("class");
+	var f = $(e.target).parents()[2];
+	var q_id = $(f).find('input[name=question]').val();
+	if (type === "icon-thumbs-up") {
+	    App.likeQuestion(f, q_id);
+	    console.log("Thumbs up clicked " + q_id);
+	} else if (type === "icon-thumbs-down") {
+	    App.unlikeQuestion(f, q_id);
+	    console.log("thumbs down clicked" + q_id);
+	}
+    });
+
+    $(".question .header label").click(function(e) {
+	console.log("close clicked");
+	var f = $(e.target).parents()[1];
+	var q_id = $(f).find('input[name=question]').val();
+	App.closeQuestion(f, q_id);
+    });
+
 });
+
+App.likeQuestion = function(f, id) {
+    $.ajax({
+	'url' : '/like',
+	data: {
+	    id: id
+	},
+	success : function(data) {
+	    $(f).find(".like").html(data);
+	    console.log("ok");
+	}
+    });
+};
+
+
+App.unlikeQuestion = function(f, id) {
+    $.ajax({
+	'url' : '/unlike',
+	data: {
+	    id: id
+	},
+	success : function(data) {
+	    $(f).find(".unlike").html(data);
+	    console.log("ok");
+	}
+    });
+};
+
+App.closeQuestion = function(el, id) {
+    $.ajax({
+	url: '/qclose',
+	data: {
+	    id : id
+	},
+	success: function() {
+	    $(el).hide();
+	}
+    });	
+};
+

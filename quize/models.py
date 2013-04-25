@@ -72,3 +72,4 @@ class UserQuestion(models.Model):
     liked = models.BooleanField(default=False)
     unliked = models.BooleanField(default=False)
     answered = models.BooleanField(default=False)
+    closed = models.BooleanField(default=False)

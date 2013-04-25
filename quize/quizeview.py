@@ -28,5 +28,6 @@ def quize_start(request , qid):
     'quize' : q,
     'uquize' : uq,
     'questions' : questions,
-    'showTags' : False
+    'showTags' : False,
+    'hideHeader' : True
     })

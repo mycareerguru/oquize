@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from quize.forms import RegisterForm, QuestionForm
 from quize.models import Question, Tag, Answer, Quize, UserQuize, QuizeAnswers
+from quize.models import UserQuestion
 
 def main_page(request):
     return render(request, "quize/main_page.html")
@@ -187,3 +188,39 @@ def quiz_page(request):
     return render(request, "quize/quize_page.html", {
         'quizes' : quizes,
     })
+
+
+@login_required
+def like_page(request):
+    id = request.GET['id']
+    q = Question.objects.get(id=id)
+    uq, created = UserQuestion.objects.get_or_create(user=request.user, question=q)
+    if not (uq.liked or uq.unliked):
+        uq.liked = True
+        uq.save()
+        q.num_likes  = q.num_likes + 1
+        q.save()
+    return HttpResponse(str(q.num_likes))
+
+        
+@login_required
+def unlike_page(request):
+    id = request.GET['id']
+    q = Question.objects.get(id=id)
+    uq, created = UserQuestion.objects.get_or_create(user=request.user, question=q)
+    if not (uq.liked or uq.unliked):
+        uq.unliked = True
+        uq.save()
+        q.num_unlikes  = q.num_unlikes + 1
+        q.save()
+    return HttpResponse(str(q.num_unlikes))
+
+
+def close_page(request):
+    id = request.GET['id']
+    q = Question.objects.get(id=id)
+    uq, created = UserQuestion.objects.get_or_create(
+        user=request.user, question=q)
+    uq.closed = True
+    uq.save()
+    return HttpResponse("ok")

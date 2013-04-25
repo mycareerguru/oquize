@@ -6,7 +6,9 @@
 
 <div class="question" id="qid_{{ q.id}}">
   <div class="header">
+    {% if not hideHeader %}
     <label class="pull-right">X</label>
+    {% endif %}
   </div>
 
   <div class="main-question">
@@ -33,8 +35,10 @@
   <div class="footer">
     <div class="likes">
       {% if showLikes %}
-      <i class="icon-thumbs-up"></i> {{ q.num_likes }}
-      <i class="icon-thumbs-down"></i> {{ q.num_unlikes }}
+      <i class="icon-thumbs-up"></i>
+      <span class="like">{{ q.num_likes }}</span>
+      <i class="icon-thumbs-down"></i>
+      <span class="unlike">{{ q.num_unlikes }}</span>
       {% endif %}
     </div>
     {% if showTags %}
