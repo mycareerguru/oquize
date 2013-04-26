@@ -1,0 +1,44 @@
+{% extends "quize/base.html" %}
+
+{% block content %}
+
+<div>
+<p>Name {{ quize.quizeName }}
+Total Questions {{ quize.totalQuestion }}
+Time Allowd {{ quize.timeAllowed }}</p>
+</div>
+
+<hr>
+
+<div>
+  <p>Started {{ uq.start }}
+     Total Attempted {{ uq.totalAttempted }}
+     Total Correct {{ uq.totalCorrect }}</p>
+</div>
+
+<hr>
+
+{% if answers %}
+<div class="question" id="qid_{{ q.id}}">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Question</th>
+      <th>Correct Answer</th>
+      <th>Your Answer</th>
+    </tr>
+    </thread>
+    <tbody>
+      {% for ans in answers %}
+      <tr>
+      <td><a href="/question/{{ ans.question.id }}">{{ ans.question.text }}</a></td>
+      <td>{{ ans.question.ans }}</td>
+      <td>{{ ans.ans }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>
+<hr>
+</div>
+{% endif %}
+{% endblock %}

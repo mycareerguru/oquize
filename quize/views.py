@@ -5,18 +5,18 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from quize.forms import RegisterForm, QuestionForm
 from quize.models import Question, Tag, Answer, Quize, UserQuize, QuizeAnswers
+from quize.models import UserQuestion
 
 def main_page(request):
     return render(request, "quize/main_page.html")
 
 @login_required
 def user_page(request, user):
-    questions = (Question.objects.all()).order_by('date_added')[:50]
-
-    #qlist=list(questions)
-    #qlist.reverse()
+    questions = Question.objects.all()
     return render(request, "quize/user_page.html", {
-        'questions' : questions
+        'questions' : questions,
+        'showTags' : True,
+        'showLikes' : True,
     })
 
     
@@ -68,7 +68,8 @@ def tag_display(request , tag):
     return render(request,"quize/tag_display.html",{
     'questions' : b,
     'quizes' : q,
-    'showTags' : False
+    'showTags' : False,
+    'showLikes' : True,
     })
     
 def search_page(request):
@@ -95,7 +96,8 @@ def search_page(request):
         'questions' : qlist,
         'quizes' : quizes,
         'showResult' : showResult,
-        'query' : query
+        'query' : query,
+        'showLikes' : True,
     })
 
 def save_general_ans(request, question, user_ans):
@@ -180,15 +182,52 @@ def result_page(request):
     
 @login_required
 def quiz_page(request):
+    # TODO limit size of rows and order by data created
+    # quizes = Quize.objects.all().order_by("-date_created")[0:50]
     quizes = Quize.objects.all()
     return render(request, "quize/quize_page.html", {
-        'quizes' : quizes
+        'quizes' : quizes,
     })
 
+
 @login_required
-def question_page(request, qid):
-    question = Question.objects.get(id=qid)
+def like_page(request):
+    id = request.GET['id']
+    q = Question.objects.get(id=id)
+    uq, created = UserQuestion.objects.get_or_create(user=request.user, question=q)
+    if not (uq.liked or uq.unliked):
+        uq.liked = True
+        uq.save()
+        q.num_likes  = q.num_likes + 1
+        q.save()
+    return HttpResponse(str(q.num_likes))
+
+        
+@login_required
+def unlike_page(request):
+    id = request.GET['id']
+    q = Question.objects.get(id=id)
+    uq, created = UserQuestion.objects.get_or_create(user=request.user, question=q)
+    if not (uq.liked or uq.unliked):
+        uq.unliked = True
+        uq.save()
+        q.num_unlikes  = q.num_unlikes + 1
+        q.save()
+    return HttpResponse(str(q.num_unlikes))
+
+
+def close_page(request):
+    id = request.GET['id']
+    q = Question.objects.get(id=id)
+    uq, created = UserQuestion.objects.get_or_create(
+        user=request.user, question=q)
+    uq.closed = True
+    uq.save()
+    return HttpResponse("ok")
+
+
+def question_page(request, id):
+    q = Question.objects.get(id=id)
     return render(request, "quize/question_page.html", {
-            'q' : question
-    })
-    
+            'q' : q
+            });

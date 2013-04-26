@@ -58,9 +58,23 @@ class QuizeAnswers(models.Model):
     correct = models.BooleanField(default=False)
     num_attemps = models.IntegerField(default=0)
     
+    def __unicode__(self):
+        retstr = "[" + str(self.id) + " " + self.question.text
+        retstr += " " + str(self.ans) + "]"
+        return retstr
+ 
 class Tag(models.Model):
     name = models.CharField(max_length=30,unique=True)
     questions = models.ManyToManyField(Question)
     quizes = models.ManyToManyField(Quize)
     def __unicode__(self):
         return self.name
+
+
+class UserQuestion(models.Model):
+    question = models.ForeignKey(Question)
+    user = models.ForeignKey(User)
+    liked = models.BooleanField(default=False)
+    unliked = models.BooleanField(default=False)
+    answered = models.BooleanField(default=False)
+    closed = models.BooleanField(default=False)

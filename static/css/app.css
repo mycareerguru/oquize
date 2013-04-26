@@ -1,0 +1,34 @@
+
+.question .header {
+    height: 14px;
+}
+
+.question .footer {
+    height: 40px;
+}
+
+.question .footer i {
+    width: 20px;
+    height: 20px;
+}
+
+
+.question .footer .tags {
+    float: left;
+}
+
+.tags a {
+    background: #555555;
+    color: #eeeeee;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: solid 1px;
+    text-decoration: none;
+    vertical-align: center;                                                       }
+
+.tags a:hover {
+    background: #eeeeee;
+    color: #555555;
+}

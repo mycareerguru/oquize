@@ -127,6 +127,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'quize',
+    'disqus',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -163,10 +164,6 @@ LOGGING = {
 }
 
 
-# Parse database configuration from $DATABASE_URL
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
-
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+DISQUS_API_KEY = 'osy6bDEvyVwJttYrRYD8IeoZGpKWIP5LPR4yfgvuRwtGTMmSsNcKw2VNNopoZyDh'
+DISQUS_WEBSITE_SHORTNAME = 'oquize'
 

@@ -6,16 +6,18 @@
         <p>Total Questions {{ quize.totalQuestion }}</p>
         <p>Time Allowd {{ quize.timeAllowed }}</p>
     </div>
-    <a class="btn" href="/quiz/{{ quize.id }}/start">Start</a>
-    
+    <a class="btn btn-primary" href="/quiz/{{ quize.id }}/start">Start</a>
+    <hr>
     {% if uqs %}
+    <h3> Result of previous attempts for this quize </h3>
     <div id="history">
-        <table boder="1px" style="border-color: red">
+        <table class="table table-hover">
                 <tr>
                     <td>Id</td>
                     <td>Date Taken</td>
                     <td>Attempted</td>
                     <td>Correct</td>
+		    <td></td>
                 </tr>
         {% for uq in uqs %}
                 <tr>
@@ -23,6 +25,9 @@
                     <td>{{ uq.start }}</td>
                     <td>{{ uq.totalAttempted }}</td>
                     <td>{{ uq.totalCorrect }}</td>
+		    <td><a href="/result/quize/{{ uq.id }}" class="btn">
+			Detailed Result</a>
+		    </td>
                 </tr>
         {% endfor %}
         </table>
