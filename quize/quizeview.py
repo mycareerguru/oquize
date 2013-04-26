@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from quize.forms import RegisterForm, QuestionForm
 from quize.models import Question, Tag, Answer, Quize, UserQuize
+from quize.models import QuizeAnswers
 
 def quize_display(request , qid):
     q = Quize.objects.get(id=qid)
@@ -31,3 +32,15 @@ def quize_start(request , qid):
     'showTags' : False,
     'hideHeader' : True
     })
+
+def quize_result(request, id):
+    uq = UserQuize.objects.get(id=id)
+    answers = uq.quizeanswers_set.all()
+    q = uq.quize
+    questions = q.questions.all()
+    print (questions)
+    return render(request, "quize/quize_result.html", {
+            'quize' : q,
+            'answers': answers,
+            'uq' : uq
+            });

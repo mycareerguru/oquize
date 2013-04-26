@@ -17,6 +17,7 @@
                     <td>Date Taken</td>
                     <td>Attempted</td>
                     <td>Correct</td>
+		    <td></td>
                 </tr>
         {% for uq in uqs %}
                 <tr>
@@ -24,6 +25,9 @@
                     <td>{{ uq.start }}</td>
                     <td>{{ uq.totalAttempted }}</td>
                     <td>{{ uq.totalCorrect }}</td>
+		    <td><a href="/result/quize/{{ uq.id }}" class="btn">
+			Detailed Result</a>
+		    </td>
                 </tr>
         {% endfor %}
         </table>

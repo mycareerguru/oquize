@@ -127,6 +127,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'quize',
+    'disqus',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -161,3 +162,8 @@ LOGGING = {
         },
     }
 }
+
+
+DISQUS_API_KEY = 'osy6bDEvyVwJttYrRYD8IeoZGpKWIP5LPR4yfgvuRwtGTMmSsNcKw2VNNopoZyDh'
+DISQUS_WEBSITE_SHORTNAME = 'oquize'
+

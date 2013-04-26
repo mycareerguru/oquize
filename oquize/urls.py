@@ -7,6 +7,8 @@ admin.autodiscover()
 from quize.views import main_page, user_page, add_question, tag_page
 from quize.views import tag_display, search_page, user_answer, result_page
 from quize.views import quiz_page, like_page, unlike_page, close_page
+from quize.views import question_page
+from quize.quizeview import quize_result
 from quize.register import logout_page, register_page, register_success
 from quize.quizeview import quize_display, quize_start
 
@@ -29,6 +31,8 @@ urlpatterns = patterns('',
     (r'^like/$', like_page),
     (r'^unlike/$', unlike_page),
     (r'^qclose/$', close_page),
+    (r'^result/quize/(\w+)/$', quize_result),
+    (r'^question/(\w+)/$', question_page),
     # Examples:
     # url(r'^$', 'oquize.views.home', name='home'),
     # url(r'^oquize/', include('oquize.foo.urls')),

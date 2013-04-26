@@ -224,3 +224,10 @@ def close_page(request):
     uq.closed = True
     uq.save()
     return HttpResponse("ok")
+
+
+def question_page(request, id):
+    q = Question.objects.get(id=id)
+    return render(request, "quize/question_page.html", {
+            'q' : q
+            });
