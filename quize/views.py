@@ -12,7 +12,8 @@ def main_page(request):
 
 @login_required
 def user_page(request, user):
-    questions = Question.objects.all()
+    questions = Question.objects.all().order_by('-date_added')
+
     return render(request, "quize/user_page.html", {
         'questions' : questions,
         'showTags' : True,
@@ -81,17 +82,17 @@ def search_page(request):
     if 'query' in request.GET:
         query = request.GET['query']
         showResult = True;
-        questions = Question.objects.filter(text__icontains=query)[:10]
+        questions =Question.objects.filter(text__icontains=query)[:50]
         qlist = list(questions)
         tags = Tag.objects.filter(name__icontains=query)
         for tag in tags:
-            q = tag.questions.all()[:10]
+            q = tag.questions.all()[:50]
             qlist.extend(list(q))
             
         for tag in tags:
-            qz = tag.quizes.all()[:10]
+            qz = tag.quizes.all()[:50]
             quizes.extend(list(qz))
-            
+    qlist=set(qlist)
     return render(request, "quize/searchcombine.html", {
         'questions' : qlist,
         'quizes' : quizes,
