@@ -5,7 +5,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 from quize.views import main_page, user_page, add_question, tag_page
-from quize.views import tag_display, search_page, user_answer, result_page
+from quize.views import tag_display, search_page, user_answer
+from quize.results import result_page
 from quize.views import quiz_page, like_page, unlike_page, close_page
 from quize.views import question_page
 from quize.quizeview import quize_result

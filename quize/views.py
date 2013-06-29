@@ -160,27 +160,7 @@ def user_answer(request):
     return HttpResponse("Hello")    
         
     
-@login_required
-def result_page(request):
-    try:
-        answers = Answer.objects.filter(user=request.user)
-    except:
-        return Http404
-    total_correct = 0
-    total_wrong = 0
-    total_attempts = 0
-    for ans in answers:
-        total_attempts = total_attempts + ans.num_attemps
-        if ans.correct:
-            total_correct = total_correct + 1
-        else:
-            total_wrong = total_wrong + 1
-    return render(request, "quize/result_page.html", {
-        'total_attempts' : total_attempts,
-        'total_correct' : total_correct,
-        'total_wrong' : total_wrong,
-    })
-    
+   
 @login_required
 def quiz_page(request):
     # TODO limit size of rows and order by data created

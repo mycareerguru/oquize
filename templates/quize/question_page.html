@@ -1,6 +1,12 @@
 {% extends "quize/base.html" %}
 
 {% block content %}
+<style media="screen" type="text/css">
+    .correctans {
+        font-size: 20px;
+        padding-top: 20px;
+    }
+</style>
 <div class="row">
   <div class="span2"></div>
   <div class="span7">
@@ -31,6 +37,9 @@
 	<a href="/tags/{{ x.name }}" > {{x.name}}</a>
 	{% endfor %}
       </div>
+    </div>
+    <div class="correctans">
+        <p>Correct answer is {{ q.ans }}</p>
     </div>
     <hr>
   

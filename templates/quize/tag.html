@@ -2,8 +2,7 @@
 {% block title %}Main Page{% endblock %}
 {% block head %}Welcome to Online Aptitude Test {% endblock %}
 {% block content %}
-  
     {% for tag in tags %}
-      <a class ="btn" href="{{tag.name}}" >{{tag.name}} </a> 
+      <a class="btn" href="{{tag.name}}" >{{tag.name}} </a> 
     {%endfor%}
 {%endblock%}

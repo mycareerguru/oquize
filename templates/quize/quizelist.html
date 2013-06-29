@@ -1,25 +1,29 @@
 {% if quizes %}
- 
   <div class="span2"></div>
   <div class="span7">
     <table class="table table-hover">
-        </div>
-        <tr>
-            <td>Quizes</td>
-        </tr>
+       <tr>
+         <th>Quizes</th>
+         <th>Total Question</th>
+         <th>Time Allowed</th>
+       </tr>
 
 {% for q in quizes %}
-    <div class="quize" id="quizeid_{{ q.id }}">
-                <tr>
-                    <td><a class=btn href="/quiz/{{ q.id }}">{{ q.quizeName }}</a></td>
-                </tr>
-            
-    </div>
-  </div>
-  
+       <tr>
+         <td>
+           <div class="quize" id="quizeid_{{ q.id }}">
+             <a href="/quiz/{{ q.id }}">{{ q.quizeName }}</a>
+           </div>
+         </td>
+         <td>{{ q.totalQuestion }}</td>
+         <td>{{ q.timeAllowed }}</td>
+       </tr>
 {% endfor %}
+
+    </table>
+  </div>
+  </div>
 {% else %}
 <p> No Results found </p>
-</table>
 {% endif %}
 

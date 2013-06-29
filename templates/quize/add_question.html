@@ -3,6 +3,8 @@
 {% block content %}
 <link href="/static/app/css/login.css" rel="stylesheet">
 
+<div class="row">
+    <div class="span5">
 <form method="post" action="." class="form-signin">{% csrf_token %}
     <h2 class="form-signin-heading">Add Your Question</h2>
     {{ form.as_p }}
@@ -16,6 +18,7 @@
       <p> <input id="id_tag" name="tag" type="text" placeholder="tag"/></p>-->
        <button class="btn btn-large btn-primary" type="submit">submit</button> 
 </form>
-    
+    </div>
+</div>
 {% endblock %}
 

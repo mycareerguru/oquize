@@ -5,5 +5,31 @@
 <p>You attempted {{ total_attempts }} questions </p>
 <p>You gave correct answers to {{ total_correct }} question.</p>
 <p>You answered {{ total_wrong}} incorrectly </p>
+<hr>
+{% if answers %}
+<div class="question" id="qid_{{ q.id}}">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Question</th>
+      <th>Correct Answer</th>
+      <th>Your Answer</th>
+      <th>Total attempts</th>
+    </tr>
+    </thread>
+    <tbody>
+      {% for ans in answers %}
+      <tr>
+      <td><a href="/question/{{ ans.question.id }}">{{ ans.question.text }}</a></td>
+      <td>{{ ans.question.ans }}</td>
+      <td>{{ ans.ans }}</td>
+      <td>{{ ans.num_attemps }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>
+<hr>
+</div>
+{% endif %}
 {% endblock %}
 
