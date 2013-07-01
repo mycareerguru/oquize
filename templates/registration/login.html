@@ -4,6 +4,11 @@
 <link href="/static/css/login.css" rel="stylesheet">
 
       <form method="post" action="/login/" class="form-signin">{% csrf_token %}
+        <div class="alert alert-error">
+        {% if form.errors %}
+          <p>Your username and password didn't match. Please try again.</p>
+        {% endif %}
+        </div>
         <h2 class="form-signin-heading">Please sign in</h2>
         <input id="username" type="text" name="username" class="input-block-level" placeholder="Username">
         <input type="password" id="id-password" name="password" class="input-block-level" placeholder="Password">
