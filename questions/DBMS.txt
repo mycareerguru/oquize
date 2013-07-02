@@ -1,0 +1,120 @@
+The relational database environment has all of the following components except
+users
+separate files
+database
+query languages
+2
+Database management systems are intended to 
+eliminate data redundancy
+establish relationship among records in different files
+maintain data integrity
+all of the above 
+4
+One approach to standardization storing of data?
+MIS
+structured programming
+CODASYL specification
+none of the above
+3
+The language used application programs to request data from the DBMS is referred to as the
+DML
+DDL
+query language
+all the above
+1
+The highest  level in the hierarchy of data organization is called
+data bank
+data base
+data file
+data record
+2 
+Choose the RDBMS which supports full fledged client server application development
+dBase V
+Oracle 7.1
+FoxPro 2.1
+Ingress
+2
+Report generators are used to 
+store data input by a user
+retrieve information from files
+answer queries
+both b and c
+4 
+A form defined 
+where data is placed on the screen
+the width of each field
+both a and b
+none of the above
+1 
+A top-to-bottom relationship among the items in a database is established by a 
+hierarchical schema
+network schema
+relational schema
+all of the above
+1 
+The management information system (MIS) structure with one main computer system is called a
+hierarchical MIS structure
+distributed MIS structure
+centralized MIS structure
+decentralized MIS structure
+3
+Which of the following is not true of the traditional approach to information processing
+there is common sharing of data among the various applications
+it is file oriented
+programs are dependent on the file
+it is inflexible
+1 
+Which of the following hardware component is the most important to the operation of database management system?
+high resolution video display
+printer
+high speed, large capacity disk
+plotter
+3 
+Generalized database management system do not retrieve data to meet routine request
+ 
+true
+false
+ 
+3 
+Batch processing is appropriate if
+large computer system is available
+only a small computer system is avilbale
+only a few transactions are involved
+none of the above
+4 
+Large collection of files are called
+fields
+records
+database
+sectors
+3 
+Which of the following is not a relational database?
+dBase IV
+4th Dimension
+FoxPro
+Reflex
+4 
+In order to use a record management system 
+you need to understand the low level details of how information is stored
+you need to understand the model the record management system uses
+bother a and b
+none of the above
+2
+Sort/Report generators
+are faster than index/report generators
+require more disk space than indexed/report generators
+do not need to sort before generating report
+both a and b
+2 
+If a piece of data is stored in two places in the database, then 
+storage space is wasted
+changing the data in one spot will cause data inconsistency
+in can be more easily accessed
+both and b
+4 
+An audit trail
+is used to make backup copies
+is the recorded history of operations performed on a file
+can be used to restore lost information
+none of the aobve
+2 

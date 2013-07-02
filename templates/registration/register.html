@@ -3,16 +3,23 @@
 {% block content %}
 <link href="/static/css/login.css" rel="stylesheet">
 
+{%if form.errors %}
+  <div class="alert alert-error">
+    <p> Username is already exist, please try again </p>
+  </div>
+{% endif %}
+
 <form method="post" action="/register/" class="form-signin">{% csrf_token %}
-    <h2 class="form-signin-heading">Join Online Quize</h2>
-    {{ form.as_p }}
-    <!--
-    <input id="username" type="text" name="username" class="input-block-level" placeholder="Username">
-    <input id="email_id" type="text" name="email_id" class="input-block-level" placeholder="Email id">
-    <input type="password" id="id-password" name="password" class="input-block-level" placeholder="Password">
-    <input type="password" id="id-repassword" name="repassword" class="input-block-level" placeholder="Confirm Password">
-    -->
-    <button class="btn btn-large btn-primary" type="submit">Join</button>
+  <h2 class="form-signin-heading">Join Online Quize</h2>
+
+  {{ form.as_p }}
+  <!--
+  <input id="username" type="text" name="username" class="input-block-level" placeholder="Username">
+  <input id="email_id" type="text" name="email_id" class="input-block-level" placeholder="Email id">
+  <input type="password" id="id-password" name="password" class="input-block-level" placeholder="Password">
+  <input type="password" id="id-repassword" name="repassword" class="input-block-level" placeholder="Confirm Password">
+  -->
+  <button class="btn btn-large btn-primary" type="submit">Join</button>
 </form>
     
 {% endblock %}

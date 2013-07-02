@@ -1,0 +1,120 @@
+Which of the following fields in a student file can be used as a primary key?
+class
+Social Security Number
+GPA
+Major
+2 
+Which of the following is not an advantage of the database approach
+Elimination of data redundancy
+Ability of associate deleted data
+increased security
+all of the above 
+4 
+Which of the following contains a complete record of all activity that affected the contents of a database during a certain period of time?
+report writer
+query language
+data manipulation language
+transaction log
+4 
+In the DBMS approach, application programs perform the 
+storage function
+processing functions
+access control
+all of the above
+2 
+A set of programs that handle a firm's database responsibilities is called
+database management system (DBMS)
+database processing system (DBPS)
+data management system (DMS)
+all of above
+4 
+Which is the make given to the database management system which is able to handle full text data, image data, audio and video?
+full media
+graphics media
+multimedia
+hypertext 
+3 
+A record management system
+can handle many files of information at a time
+can be used to extract information stored in a computer file
+always uses a list as its model
+both a and b 
+2 
+A command that lets you change one or more fields in a record is
+insert
+modify
+lookup
+none of above 
+2
+A transparent DBMS
+can not hide sensitive information from users
+keeps its logical structure hidden from users
+keeps its physical structure hidden from users
+both b and c 
+3 
+A file produced by a spreadsheet 
+is generally stored on disk in an ASCII text fromat
+can be used as is by the DBMS
+both a and b
+none of the above
+1
+The ascending order of a data hirerchy is:
+bit-byte-record-field-file-database
+byte-bit-field-record-file-database
+bit-byte-field-record-file-database
+bit-byte-file-record-field-database
+3 
+Which of the following is true of a network structure?
+t is a physical representation of the data
+It allows a many-to-many relationship
+It is conceptually simple
+It will be dominant data base of the future
+2 
+Which of the following is a problem of file management system?
+lack of data independence
+data redundancy
+program dependence
+all of above
+4 
+One data dictionery software package is called
+DB/DC dictionary
+TOTAL
+ACCESS
+Data Manager
+1 
+The function of a database is ...
+to check all input data
+to check all spelling
+to collect and organize input data
+to output data
+3 
+What is the language used by most of the DBMSs for helping their users to access data?
+High level language
+SQL
+Query Language
+4GL
+3 
+The model for a record management system might be
+handwritten list
+a Rolodex card file
+a business form
+all of above
+4 
+Primitive operations common to all record management system include
+print
+sort
+look-up
+all of above
+3 
+In a large DBMS
+each user can "see" only a small part of the entire database
+each subschema contains every field in the logical schema
+each user can access every subschema
+all the above
+1 
+Information can be transferred between the DBMS and a
+spreadsheet program
+word processor program
+graphics program
+all of the above
+4

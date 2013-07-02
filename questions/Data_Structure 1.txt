@@ -1,0 +1,120 @@
+Two main measures for the efficiency of an algorithm are 
+Processor and memory
+Complexity and capacity
+Time and space
+Data and space
+3 
+The time factor when determining the efficiency of algorithm is measured by
+Counting microseconds 
+Counting the number of key operations
+Counting the number of statements
+Counting the kilobytes of algorithm
+2
+The space factor when determining the efficiency of algorithm is measured by
+Counting the maximum memory needed by the algorithm
+Counting the minimum memory needed by the algorithm
+Counting the average memory needed by the algorithm
+Counting the maximum disk space needed by the algorithm
+1
+Which of the following case does not exist in complexity theory
+Best case
+Worst case
+Average case
+Null case
+4
+The Worst case occur in linear search algorithm when 
+Item is somewhere in the middle of the array
+Item is not in the array at all
+Item is the last element in the array
+Item is the last element in the array or is not there at all
+4
+The Average case occur in linear search algorithm
+When Item is somewhere in the middle of the array 
+When Item is not in the array at all
+When Item is the last element in the array
+When Item is the last element in the array or is not there at all
+1
+The complexity of the average case of an algorithm is 
+Much more complicated to analyze than that of worst case
+Much more simpler to analyze than that of worst case
+Sometimes more complicated and some other times simpler than that of worst case 
+None or above
+1
+The complexity of linear search algorithm is
+O(n)
+O(log n)
+O(n2)
+O(n log n)
+1
+The complexity of Binary search algorithm is 
+O(n)
+O(log )
+O(n2)
+O(n log n)
+2
+The complexity of Bubble sort algorithm is 
+O(n)
+O(log n)
+O(n2)
+O(n log n)
+3
+The complexity of merge sort algorithm is
+O(n)
+O(log n)
+O(n2)
+O(n log n)
+4
+The indirect change of the values of a variable in one module by another module is called
+internal change
+inter-module change
+side effect
+side-module update
+3
+Which of the following data structure is not linear data structure?
+Arrays
+Linked lists
+Both of above
+None of above
+4
+Which of the following data structure is linear data structure?
+Trees
+Graphs
+Arrays
+None of above
+3
+The operation of processing each element in the list is known as
+Sorting
+Merging
+Inserting
+Traversal
+4
+Finding the location of the element with a given value is:
+Traversal
+Search
+Sort
+None of above
+2
+Arrays are best data structures
+for relatively permanent collections of data
+for the size of the structure and the data in the structure are constantly changing
+for both of above situation
+for none of above situation
+1
+Linked lists are best suited
+for relatively permanent collections of data 
+for the size of the structure and the data in the structure are constantly changing
+for both of above situation
+for none of above situation
+2
+Each array declaration need not give, implicitly or explicitly, the information about
+the name of array
+the data type of array
+the first data from the set to be stored
+the index set of the array
+3
+The elements of an array are stored successively in memory cells because
+by this way computer can keep track only the address of the first element and the addresses of other elements can be calculated
+the architecture of computer memory does not allow arrays to store other than serially
+both of above
+none of above
+1

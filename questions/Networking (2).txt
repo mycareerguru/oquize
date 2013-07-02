@@ -1,0 +1,120 @@
+In OSI network architecture, the dialogue control and token management are responsibility of
+session layer
+network layer
+transport layer
+data link layer
+1
+In OSI network architecture, the routing is performed by
+network layer
+data link layer
+transport layer
+session layer
+1
+Which of the following performs modulation and demodulation?
+fiber optics
+satellite
+coaxial cable
+modem
+4
+The process of converting analog signals into digital signals so they can be processed by a receiving computer is referred to as:
+modulation
+simplex
+demodulation
+synchronizing
+4
+How many OSI layers are covered in the X.25 standard?
+Two
+Three
+Seven
+Six
+2
+Layer one of the OSI model is
+physical layer
+link layer
+transport layer
+network layer
+1
+The x.25 standard specifies a 
+technique for start-stop data
+technique for dial access
+DTE/DCE interface
+data bit rate
+3
+Which of the following communication modes support two-way traffic but in only one direction at a time?
+simplex
+half duplex
+three-quarters duplex
+all of the above
+2
+Which of the following might be used by a company to satisfy its growing communications needs?
+front end processor
+multiplexer
+controller
+all of the above
+4
+Question 10:
+What is the number of separate protocol layers at the serial interface gateway specified by the X.25 standard?
+4
+2
+6
+3
+4
+The interactive transmission of data within a time sharing system may be best suited to simplex lines
+half-duplex lines
+full duplex lines
+biflex-lines
+2
+Which of the following statement is incorrect?
+The difference between synchronous and asynchronous transmission is the clocking derived from the data in synchronous transmission.
+Half duplex line is a communication line in which data can move in two directions, but not at the same time.
+Teleprocessing combines telecommunications and DP techniques in online activities
+Batch processing is the prefered processing mode for telecommunication operation.
+4
+Which of hte following is considered a broad band communication channel?
+coaxial cable
+fiber optics cable
+microwave circuits
+all of above
+4
+Which of the following is not a transmission medium?
+telephone lines
+coaxial cables
+modem
+microwave systems
+3
+Which of the following does not allow multiple uses or devices to share one communication line?
+doubleplexer
+multiplexer
+concentrator
+controller
+1
+Which of the following signal is not standard RS-232-C signal?
+VDR
+RTS
+CTS
+DSR
+1
+Which of the following statement is incorrect?
+Multiplexers are designed to accept data from several I/O devices and transmit a unified stream of data on one communication line
+HDLC is a standard synchronous communication protocol.
+RTS/CTS is the way the DTE indicates that it is ready to transmit data and the way the DCW indicates that it is ready to accept data
+RTS/CTS is the way the terminal indicates ringing
+4
+Which of the following is an advantage to using fiber optics data transmission?
+resistance to data theft
+fast data transmission rate
+low noise level
+all of above
+4
+Which of the following is required to communicate between two computers?
+communications software
+protocol
+communication hardware
+all of above including access to transmission medium
+4
+The transmission signal coding method of TI carrier is called
+Bipolar
+NRZ
+Manchester
+Binary
+1

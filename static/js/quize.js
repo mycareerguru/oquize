@@ -22,6 +22,7 @@ function QuizeState(id, total, time) {
 }
 
 QuizeState.prototype.questionAnswered = function(q) {
+    /* change the width of progress bar to update it */
     this.answered += 1;
     var perc = (this.answered / this.totalQuestions) * 100;
     $("#progress .bar").css({
@@ -32,7 +33,7 @@ QuizeState.prototype.questionAnswered = function(q) {
     }
     var next = $(".question")[this.answered];
     $(next).show();
-    // $("#totalA").html(this.answered);
+    $("#totalA").html(this.answered);
 }
 
 App.questionSubmitted = function(q) {

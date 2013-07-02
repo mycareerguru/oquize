@@ -1,0 +1,180 @@
+Which data communication method is used to transmit the data over a serial communication link?
+simplex
+half-duplex
+full-duplex
+b and c
+3
+What is the minimum number of wires needed to send data over a serial communication link layer?
+1
+2
+4
+6
+2
+Which of the following types of channels moves data relatively slowly?
+wide band channel
+voice band challen
+narrow band channel
+band channel
+3
+Most data communications involving telegraph lines use:
+simplex lines
+wideband channel
+narrowband channel
+dialed service
+3
+A communications device that combines transmissions from several I/O devices into one line is a
+concentrator
+modifier
+multiplexer
+full-duplex line
+3
+How much power (roughly) a light emitting diode can couple into an optical fiber?
+100 microwatts
+440 microwatts
+100 picowatts
+10 miliwatts
+1
+The synchronous modems are more costly than the asynchronous modems because
+they produce large volume of data
+they contain clock recovery circuits
+they transmit the data with stop and start bits
+they operate with a larger bandwidth
+2
+Which of the following statement is correct?
+terminal section of a synchronous modem contains the scrambler
+receiver section of a synchronous modem contains the scrambler
+transmission section of a synchronous modem contains the scrambler
+control section of a synchronous modem contains the scrambler
+3
+In a synchronous modem, the digital-to-analog converter transmits signal to the 
+equilizer
+modulator
+demodulator
+terminal
+1
+Which of the following communications lines is best suited to interactive processing applications?
+narrow band channel
+simplex lines
+full duplex lines
+mixed band channels
+3
+A remote batch-processing operation in which data is solely input to a central computer would require
+telegraphp line
+simplex lines
+mixed bad channel
+all of above
+2
+A band is always equivalent to 
+a byte
+a bit
+100 bits
+none of above
+4
+The loss in signal power as light travels down the fiber is called
+attenuation
+progragation
+scattering
+interruption
+1
+Avalanche photodiode receivers can detect bits of transmitted data by receiving
+100 photons
+200 photons
+2000 photons
+300 photons
+2
+Communiction circuits that transmit data in both directions but not at the same time are operating in
+a simplex mode
+a half duplex mode
+a full duplex mode
+an asynchronous mode
+2
+An example of a medium speed, switched communications service is
+series 1000
+data phone 50
+DDD
+All of the above
+3
+In communication satellite, multiple repeaters are known as
+detector
+modulator
+stations
+transponders
+4
+While transmitting odd-parity coded symbols, the number of zeros in each symbol is
+odd
+even
+a and b both
+unknown
+4
+Data communications monitors available on the software marked include
+ENVIRON/1
+TOTAL
+BPL
+Telnet
+1
+An example of an analog communication method is
+laser beam
+microwave
+voice grade telephone line
+all of the above
+4
+Number of bits per symbol used in Baudot code is
+7
+5
+8
+9
+2
+What is the main difference between DDCMP and SDLC?
+DDCMP does not need special hardware to final the beginning of a message
+DDCMP has a message header
+SDLC has a IP address
+SDLC does not use CRC
+1
+An example of digital, rather than analog, communication is
+DDD
+DDS
+WATS
+DDT
+2
+Terminals are required for 
+real-time, batch processing & time-sharing
+real time, time-sharing & distributed message processing
+real time, distributed processing & manager inquiry
+real-time,  time sharing & message switching
+4
+The receive equilizer reduces delay distortions using a
+tapped delay lines
+gearshift
+descrambler
+difference engine
+1
+Ina synchronous modem, the receive equilizer is known as
+adaptive equilizer
+impariment equilizer
+statistical equilizer
+compromise equilizer 
+1
+The channel in the data communication model can be
+postal mail services
+telephone lines
+radio lines
+any of the above
+4
+A data terminal serves as an
+Effector
+sensor
+both a and b
+neither a nor b
+3
+Which of the following transmission systems provide the highest data rate to in individual device?
+computer bus
+telephone lines
+voice and mode
+lease lines
+1
+A protocol is a set of rules governing a time sequence of events that must take place
+between peers
+between an interface
+between modems
+across an interface
+1

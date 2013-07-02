@@ -1,0 +1,120 @@
+Which type of file is part of the Oracle database?
+Control file
+Password file
+Parameter files
+Archived log files
+1
+Which statements are use to UNLOCK the user? 
+Alter user Scott account lock;
+Modified user Scott account unlock;
+Alter user Scott account unlock;
+Alter user Scott unlock
+2
+For which two constraints are indexes created when the constraint is added?
+Unique
+Not null
+Primary key
+both A & B
+4
+What type of failure occurs when Oracle fails due to an operating system or computer hardware failure?
+Application failure
+Instance Failure
+Media Failure
+Rollback failure
+2
+What Oracle backup and recovery file contains user and system data? 
+Control file
+Datafile
+OnLine ReDo file
+Offline ReDo file
+2 
+When is the SGA created in an Oracle database environment?
+When the database is created
+When a user process is started
+When the database is mounted
+When the instance is started
+4    
+Which password management feature ensures a user cannot reuse a password for a specified time interval?
+Account Locking
+Password History
+Password Verification
+Password Expiration and Aging
+2   
+Which privilege is required to create a database?
+SYSDBA
+DBA
+SYSOPER
+RESOURCE
+1   
+What is the type of Oracle backup in which all uncommitted changes have been removed from the datafiles?
+Full backup
+Consistent backup
+Inconsistent backup
+Differential backup
+2     
+Which three are the physical structures that constitute the Oracle database? (Choose three.) 
+Data file
+Log file
+Control file
+all the above
+4    
+What is the maximum size of the page ?
+Characters wide & 265 characters length
+Characters wide & 265 characters length
+Characters wide & 80 characters length
+None of the above
+2 
+Relational calculus is a
+Procedural language.
+Non- Procedural language.
+Data definition language.
+High level language.
+2   
+The view of total database content is
+Conceptual view.
+Internal view.
+External view.
+Physical View.
+1   
+DML is provided for 
+Description of logical structure of database.
+Addition of new structures in the database system.
+Manipulation & processing of database.
+Definition of physical structure of database system.
+3   
+‘AS’ clause is used in SQL for
+Selection operation.
+Rename operation.
+Join operation.
+Projection operation.
+2    
+ODBC stands for   
+Object Database Connectivity.
+Oral Database Connectivity.
+Oracle Database Connectivity.
+Open Database Connectivity.
+4   
+In the architecture of a database system external level is the 
+Physical level.
+Logical level.
+Conceptual level
+View level.
+4    
+In an E-R diagram attributes are represented by 
+rectangle.
+Square.
+Ellipse.
+Triangle.
+3      
+A logical schema
+Is the entire database.
+Is a standard way of organizing information into accessible parts?
+Describes how data is actually stored on disk.
+Both (A) and (C)
+1 
+The database environment has all of the following components except:
+Users.
+Separate files.
+Database.
+Database administrator
+1 

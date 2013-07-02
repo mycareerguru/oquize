@@ -1,0 +1,180 @@
+Round robin scheduling is essentially the preemptive version of ________
+FIFO 
+Shortest job first 
+Shortes remaining 
+Longest time first 
+1 
+A page fault occurs 
+when the page is not in the memory 
+when the page is in the memory 
+when the process enters the blocked state 
+when the process is in the ready state 
+1
+Which of the following will determine your choice of systems software for your computer ? 
+Is the applications software you want to use compatible with it ? 
+Is it expensive ? 
+Is it compatible with your hardware ? 
+Both 1 and 3 
+4 
+Let S and Q be two semaphores initialized to 1, where P0 and P1 processes the following statements wait(S);wait(Q); ---; signal(S);signal(Q) and wait(Q); wait(S);---;signal(Q);signal(S); respectively. The above situation depicts a _________ . 
+Semaphore 
+Deadlock 
+Signal 
+Interrupt 
+2 
+What is a shell ? 
+It is a hardware component 
+It is a command interpreter 
+It is a part in compiler 
+It is a tool in CPU scheduling 
+2 
+Routine is not loaded until it is called. All routines are kept on disk in a relocatable load format. The main program is loaded into memory & is executed. This type of loading is called _________ 
+Static loading 
+Dynamic loading 
+Dynamic linking 
+Overlays 
+3 
+In the blocked state 
+the processes waiting for I/O are found 
+the process which is running is found 
+the processes waiting for the processor are found 
+none of the above 
+1 
+What is the memory from 1K - 640K called ? 
+Extended Memory 
+Normal Memory 
+Low Memory 
+Conventional Memory 
+4 
+Virtual memory is __________. 
+An extremely large main memory 
+An extremely large secondary memory 
+An illusion of extremely large main memory 
+A type of memory used in super computers. 
+3 
+The process related to process control, file management, device management, information about system and communication that is requested by any higher level language can be performed by __________. 
+Editors 
+Compilers 
+System Call 
+Caching 
+3 
+If the Disk head is located initially at 32, find the number of disk moves required with FCFS if the disk queue of I/O blocks requests are 98,37,14,124,65,67. 
+310 
+324 
+315 
+321 
+4 
+Multiprogramming systems ________. 
+Are easier to develop than single programming systems 
+Execute each job faster 
+Execute more jobs in the same time 
+Are used only on large main frame computers 
+3 
+Which is not the state of the process ? 
+Blocked 
+Running 
+Ready 
+Privileged 
+4 
+The solution to Critical Section Problem is : Mutual Exclusion, Progress and Bounded Waiting. 
+The statement is false 
+The statement is true. 
+The statement is contradictory. 
+None of the above 
+2 
+The problem of thrashing is effected scientifically by ________. 
+Program structure 
+Program size 
+Primary storage size 
+None of the above 
+1 
+The state of a process after it encounters an I/O instruction is __________. 
+Ready 
+Blocked/Waiting 
+Idle 
+Running 
+2 
+The number of processes completed per unit time is known as __________. 
+Output 
+Throughput 
+Efficiency 
+Capacity 
+2 
+ _________ is the situation in which a process is waiting on another process,which is also waiting on another process ... which is waiting on the first process. None of the processes involved in this circular wait are making progress. 
+Deadlock 
+Starvation 
+Dormant 
+None of the above 
+1 
+Which of the following file name extension suggests that the file is Backup copy of another file ? 
+TXT 
+COM 
+BAS 
+BAK 
+4 
+Which technique was introduced because a single job could not keep both the CPU and the I/O devices busy? 
+Time-sharing 
+SPOOLing 
+Preemptive scheduling 
+Multiprogramming 
+4 
+A critical region 
+is a piece of code which only one process executes at a time 
+is a region prone to deadlock 
+is a piece of code which only a finite number of processes execute 
+is found only in Windows NT operation system 
+1 
+The mechanism that bring a page into memory only when it is needed is called _____________ 
+Segmentation 
+Fragmentation 
+Demand Paging 
+Page Replacement 
+3 
+PCB = 
+Program Control Block 
+Process Control Block 
+Process Communication Block 
+None of the above 
+2 
+FIFO scheduling is ________. 
+Preemptive Scheduling 
+Non Preemptive Scheduling 
+Deadline Scheduling 
+Fair share scheduling 
+2 
+Switching the CPU to another Process requires to save state of the old process and loading new process state is called as __________. 
+Process Blocking 
+Context Switch 
+Time Sharing 
+None of the above 
+2 
+Which directory implementation is used in most Operating System? 
+Single level directory structure 
+Two level directory structure 
+Tree directory structure 
+Acyclic directory structure 
+3 
+The Bankers algorithm is used 
+to prevent deadlock in operating systems 
+to detect deadlock in operating systems 
+to rectify a deadlocked state 
+none of the above 
+1 
+A thread 
+is a lightweight process where the context switching is low 
+is a lightweight process where the context swithching is high 
+is used to speed up paging 
+none of the above 
+1 
+______ is a high level abstraction over Semaphore. 
+Shared memory 
+Message passing 
+Monitor 
+Mutual exclusion 
+3 
+A tree sturctured file directory system 
+allows easy storage and retrieval of file names 
+is a much debated unecessary feature 
+is not essential when we have millions of files 
+none of the above 
+1 

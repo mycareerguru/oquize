@@ -1,0 +1,168 @@
+The language which has recently become the defacto standard for interfacing application programs with relational database system is
+Oracle.
+SQL.
+DBase.
+4GL.
+2
+In an E-R diagram an entity set is represent by a
+Rectangle.
+Ellipse.
+Diamond box.
+Circle.
+1
+The DBMS language component which can be embedded in a program is
+The data definition language (DDL).
+The data manipulation language (DML).
+The database administrator (DBA).
+A query language.
+2    
+A relational database developer refers to a record as
+A criteria.
+A relation.
+A tuple.
+An attribute.
+3   
+The method in which records are physically stored in a specified order according to a key field in each record is
+Hash.
+Direct.
+Sequential.
+all of the above.
+1 
+Count function in SQL returns the number of 
+Values.
+Distinct values.
+Groups.
+Columns.
+1    
+Which one of the following statements is false?
+The data dictionary is normally maintained by the database administrator.
+Data elements in the database can be modified by changing the data dictionary.
+The data dictionary contains the name and description of each data element.
+The data dictionary is a tool used exclusively by the database administrator.
+2  
+An advantage of the database management approach is
+Data is dependent on programs.
+Data redundancy increases.
+Data is integrated and can be accessed by multiple programs.
+None of the above.
+3 
+A DBMS query language is designed to
+Support end users who use English-like commands.
+Support in the development of complex applications software.
+Specify the structure of a database.
+all of the above.
+4    
+The method of access which uses key transformation is known as
+Direct.
+Hash.
+Random.
+Sequential.
+2    
+The statement in SQL which allows to change the definition of a table is
+Alter.
+Update.
+Create.
+Select.
+1 
+Relational Algebra is 
+Data Definition Language.
+Meta Language
+Procedural query Language
+None of the above
+3 
+Key to represent relationship between tables is called
+Primary key
+Secondary Key
+Foreign Key
+None of these
+3 
+DBMS helps achieve
+Data independence
+Centralized control of data
+Neither (nor (B)
+Both (and (B)
+4 
+Which of the following are the properties of entities?
+Groups
+Table
+Attributes
+Switchboards
+3   
+Which of the following is correct?
+A SQL query automatically eliminates duplicates.
+SQL permits attribute names to be repeated in the same relation.
+A SQL query will not work if there are no indexes on the relations
+None of these
+4   
+It is better to use files than a DBMS when there are
+Stringent real-time requirements.
+Multiple users wish to access the data.
+Complex relationships among data.
+All of the above.
+2 
+Which of the following is a valid SQL type?
+CHARACTER
+NUMERIC
+FLOAT
+All of the above
+4   
+Which of the following is an advantage of view? 
+Data security
+Derived columns
+Hiding of complex queries
+All of the above
+4 
+Which database level is closest to the users? 
+External
+Internal
+Physical
+Conceptual
+1 
+A set of possible data values is called 
+Attribute.
+Degree.
+Tuple.
+Domain.
+4 
+Which of the following is another name for weak entity? 
+Child
+Owner
+Dominant
+All of the above
+1    
+Which of the following database object does not physically exist?
+Base table
+Index
+View
+None of the above
+3 
+A data dictionary is a special file that contains:
+The name of all fields in all files.
+The width of all fields in all files.
+The data type of all fields in all files.
+All of the above.
+4 
+A primary key is combined with a foreign key creates
+Parent-Child relationship between the tables that connect them.
+Many to many relationship between the tables that connect them.
+Network model between the tables that connect them.
+None of the above.
+1 
+Which one of the following is not true for a view:
+View is derived from other tables.
+View is a virtual table.
+A view definition is permanently stored as part of the database.
+View never contains derived columns.
+3    
+Which two files are used during operation of the DBMS?
+Query languages and utilities
+DML and query language
+Data dictionary and transaction log
+Data dictionary and query language
+3   
+_________ data type can store unstructured data
+RAW
+CHAR
+NUMERIC
+VARCHAR
+1    
