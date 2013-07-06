@@ -71,54 +71,54 @@ def add(name, filename, username, tags, minutes):
 
 def test():
     Question.objects.all().delete()
-    add("math1", "/home1/tushar/devel/python/sagar/oquize/questions/q1.txt", "sagar", "math general_apti",
+    add("math1", "questions/q1.txt", "sagar", "math general_apti",
         20)
-    add("computerknowledge1", "/home1/tushar/devel/python/sagar/oquize/questions/computer_knowledge1.txt",
+    add("computerknowledge1", "questions/computer_knowledge1.txt",
         "sagar",
         "computerknowledge", 20)
-    add("computerknowledge2", "/home1/tushar/devel/python/sagar/oquize/questions/computer_knowledge2.txt",
+    add("computerknowledge2", "questions/computer_knowledge2.txt",
         "sagar",
         "computerknowledge", 20)
-    add("numberseries1", "/home1/tushar/devel/python/sagar/oquize/questions/computer_knowledge2.txt",
+    add("numberseries1", "questions/computer_knowledge2.txt",
         "sagar",
         "math numberseries", 30)
-    add("Data_Structure 1", "/home1/tushar/devel/python/sagar/oquize/questions/Data_Structure 1.txt",
+    add("Data_Structure 1", "questions/Data_Structure 1.txt",
         "sagar",
         "Data_Structure", 20)
-    add("Data_Structure 2", "/home1/tushar/devel/python/sagar/oquize/questions/Data_Structure 2.txt",
+    add("Data_Structure 2", "questions/Data_Structure 2.txt",
         "sagar",
         "Data_Structure", 20)
-    add("Data-Structure 3", "/home1/tushar/devel/python/sagar/oquize/questions/Data-Structure 3.txt",
+    add("Data-Structure 3", "questions/Data-Structure 3.txt",
         "sagar",
         "Data_Structure", 20)
-    add("DBMS", "/home1/tushar/devel/python/sagar/oquize/questions/DBMS.txt",
+    add("DBMS", "questions/DBMS.txt",
         "sagar",
         "DBMS", 20)
-    add("DBMS 1", "/home1/tushar/devel/python/sagar/oquize/questions/DBMS 1.txt",
+    add("DBMS 1", "questions/DBMS 1.txt",
         "sagar",
         "DBMS", 20)
-    add("DBMS (2)", "/home1/tushar/devel/python/sagar/oquize/questions/DBMS (2).txt",
+    add("DBMS (2)", "questions/DBMS (2).txt",
         "sagar",
         "DBMS", 20)
-    add("DBMS (3)", "/home1/tushar/devel/python/sagar/oquize/questions/DBMS (3).txt",
+    add("DBMS (3)", "questions/DBMS (3).txt",
         "sagar",
         "DBMS", 20)
-    add("gk_test", "/home1/tushar/devel/python/sagar/oquize/questions/gk_test.txt",
+    add("gk_test", "questions/gk_test.txt",
         "sagar",
         "Genral knowledge", 20)
-    add("Mental Ability", "/home1/tushar/devel/python/sagar/oquize/questions/Mental Ability.txt",
+    add("Mental Ability", "questions/Mental Ability.txt",
         "sagar",
         "Mental Ability", 20)
-    add("Mental Ability 1", "/home1/tushar/devel/python/sagar/oquize/questions/Mental Ability 1.txt",
+    add("Mental Ability 1", "questions/Mental Ability 1.txt",
         "sagar",
         "Mental Ability", 20)
-    add("Operating System", "/home1/tushar/devel/python/sagar/oquize/questions/Operating System.txt",
+    add("Operating System", "questions/Operating System.txt",
         "sagar",
         "Operating System", 20)
-    add("Networking", "/home1/tushar/devel/python/sagar/oquize/questions/Networking.txt",
+    add("Networking", "questions/Networking.txt",
         "sagar",
         "Networking", 20)
-    add("Networking (2)", "/home1/tushar/devel/python/sagar/oquize/questions/Networking (2).txt",
+    add("Networking (2)", "questions/Networking (2).txt",
         "sagar",
         "Networking", 20)
     

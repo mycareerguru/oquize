@@ -82,7 +82,7 @@ Addition of new structures in the database system.
 Manipulation & processing of database.
 Definition of physical structure of database system.
 3   
-‘AS’ clause is used in SQL for
+AS clause is used in SQL for
 Selection operation.
 Rename operation.
 Join operation.
