@@ -12,12 +12,28 @@ function questionSubmitted(question) {
 
 $(document).ready(function() {
 
+
+    /* register a click handler with jquery,
+     * when user clicks a submit button for a question
+     * this function will get called
+     * Argument e is set to the button element clicked */
     var buttonClickedFunction = function(e) {
         console.log(e.target);
+        // get the area of question for which submit button is
+        // clicked.
         var f = $(e.target).parent().prev().parent();
+        /* question id is stored in a hidden input filed with name
+         * question. */
         var question = f.find('input[name=question]').val();
+        /* quize id is stored in a global element whose id is
+         * quizid */
         var qidelem = $("#quizid")[0];
+        /* If quize is active then only qidelem is valid else
+         * set qid to 0 */
         var qid = qidelem ? $(qidelem).val() : 0;
+        
+        /* If user have not clicked any answer then don't submi
+         * it to the server */
         var ans = f.find('input[name=ans]:radio:checked').val();
         if (ans == undefined) {
             e.preventDefault();
@@ -67,6 +83,10 @@ $(document).ready(function() {
         $(".question .header label").click(closeClicked);
     };
 
+  /* register a function, which is called when user enter
+   * data into search box, if user presses enter then
+   * submit search query to server, and display the result
+   * after menu bar */
     $(".search-query").keydown(function(e) {
         if (e.which == 13) {
             query = $(".search-query").val();
