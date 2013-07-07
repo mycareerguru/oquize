@@ -13,9 +13,22 @@ def main_page(request):
 @login_required
 def user_page(request, user):
     questions = Question.objects.all().order_by('-date_added')
+    total_questions = 0
+    questionList = []
+    for q in questions:
+        try:
+            userq = UserQuestion.objects.get(question=q, user=request.user)
+            if (userq.answered or userq.closed):
+                continue
+            questionList.append(q)
+        except:
+            questionList.append(q)
+
+        if (len(questionList) >= 50):
+            break
 
     return render(request, "quize/user_page.html", {
-        'questions' : questions,
+        'questions' : questionList,
         'showTags' : True,
         'showLikes' : True,
     })
@@ -111,7 +124,11 @@ def save_general_ans(request, question, user_ans):
     answer.correct = (question.ans == user_ans);  
     answer.num_attemps = answer.num_attemps + 1    
     answer.save()
-    
+    uq, created = UserQuestion.objects.get_or_create(user=request.user,
+                                                     question=question)
+    uq.answered = True
+    uq.save()
+
     
 def save_quize_ans(request, question, user_ans, quizeid):
     created = False
