@@ -12,22 +12,7 @@ function questionSubmitted(question) {
 
 $(document).ready(function() {
 
-    $(".search-query").keydown(function(e) {
-        if (e.which == 13) {
-            query = $(".search-query").val();
-            console.log(query);
-            url = "/search/?query=" + encodeURIComponent(query);
-            console.log(url);
-            $("#container").load(url, function() {
-                //$("#container").children().first().before("<h3>Search result for " + $(".search-query").val() + "</h3>")
-                console.log("AJAX success");
-            });
-            console.log("Enter button pressed", "value of search is ", $(".search-query").val());
-            e.preventDefault();
-        }
-    })
-    
-    $(".question button").click(function(e) {
+    var buttonClickedFunction = function(e) {
         console.log(e.target);
         var f = $(e.target).parent().prev().parent();
         var question = f.find('input[name=question]').val();
@@ -53,10 +38,9 @@ $(document).ready(function() {
 	    }
 	})
         e.preventDefault();
-    })
+    };
 
-   
-    $(".question i").click(function(e) {
+    var likeUnlikClicked = function(e) {
 	console.log(e.target);
 	var type = $(e.target).attr("class");
 	var f = $(e.target).parents()[2];
@@ -68,15 +52,38 @@ $(document).ready(function() {
 	    App.unlikeQuestion(f, q_id);
 	    console.log("thumbs down clicked" + q_id);
 	}
-    });
+    };
 
-    $(".question .header label").click(function(e) {
+    var closeClicked = function(e) {
 	console.log("close clicked");
 	var f = $(e.target).parents()[1];
 	var q_id = $(f).find('input[name=question]').val();
 	App.closeQuestion(f, q_id);
-    });
+    };
 
+    var registerCallbacks = function() {
+        $(".question button").click(buttonClickedFunction);
+        $(".question i").click(likeUnlikClicked);
+        $(".question .header label").click(closeClicked);
+    };
+
+    $(".search-query").keydown(function(e) {
+        if (e.which == 13) {
+            query = $(".search-query").val();
+            console.log(query);
+            url = "/search/?query=" + encodeURIComponent(query);
+            console.log(url);
+            $("#container").load(url, function() {
+                //$("#container").children().first().before("<h3>Search result for " + $(".search-query").val() + "</h3>")
+                console.log("AJAX success");
+                registerCallbacks();
+            });
+            console.log("Enter button pressed", "value of search is ", $(".search-query").val());
+            e.preventDefault();
+        }
+    })
+    
+    registerCallbacks();
 });
 
 App.likeQuestion = function(f, id) {
