@@ -79,7 +79,7 @@ def test():
     add("computerknowledge2", "questions/computer_knowledge2.txt",
         "sagar",
         "computerknowledge", 20)
-    add("numberseries1", "questions/number_serise.tx",
+    add("numberseries1", "questions/number_serise.txt",
         "sagar",
         "math numberseries", 30)
     add("Data_Structure 1", "questions/Data_Structure 1.txt",
