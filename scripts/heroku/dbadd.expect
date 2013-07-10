@@ -6,9 +6,9 @@ set host  [lindex $argv 0]
 spawn /usr/local/heroku/bin/heroku run python manage.py shell
 
 expect ">>>"
-send "import oapti.addquestions\r"
+send "import oquize.addquestions\r"
 expect ">>>"
-send "oapti.addquestions.test()\r"
+send "oquize.addquestions.test()\r"
 expect ">>>"
 send "quit\r"
 interact
