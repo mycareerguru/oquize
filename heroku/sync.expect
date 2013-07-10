@@ -1,0 +1,18 @@
+#!/usr/bin/expect
+
+set timeout 60
+set host  [lindex $argv 0]
+
+spawn /usr/local/heroku/bin/heroku run python manage.py syncdb
+
+expect "(yes/no):"
+send "yes\r"
+expect "):"
+send "sagar\r"
+expect "address:"
+send "sagargosavi1112@gmail.com\r"
+expect "Password:"
+send "sagar\r"
+expect "(again):"
+send "sagar\r"
+interact

@@ -1,0 +1,14 @@
+#!/usr/bin/expect
+
+set timeout 60
+set host  [lindex $argv 0]
+
+spawn /usr/local/heroku/bin/heroku run python manage.py shell
+
+expect ">>>"
+send "import oapti.addquestions\r"
+expect ">>>"
+send "oapti.addquestions.test()\r"
+expect ">>>"
+send "quit\r"
+interact
